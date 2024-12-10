@@ -1,0 +1,7 @@
+# Auto detect text files and perform LF normalization
+* text=lf
+
+/bin/ export-ignore
+/build/ export-ignore
+/vendor/ export-ignore
+/var/ export-ignore
