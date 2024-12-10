@@ -1,0 +1,10 @@
+--TEST--
+"function_name" function
+
+--TEMPLATE--
+{{ function_name() }}
+
+--DATA--
+return []
+
+--EXPECT--
