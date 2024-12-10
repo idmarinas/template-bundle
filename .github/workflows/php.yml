@@ -1,0 +1,52 @@
+name: IDMarinas User Bundle Test Suite
+
+# Uncomment to activate this action
+# on:
+#   pull_request:
+#     types: [ opened, synchronize, reopened ]
+#     tags-ignore: [ dependencies, documentation ]
+#   push:
+#     branches:
+#       - master
+
+jobs:
+  build:
+    runs-on: ${{ matrix.operating-system }}
+    name: PHP ${{ matrix.php }} and Symfony ${{ matrix.symfony }}
+    strategy:
+      matrix:
+        operating-system: [ ubuntu-latest ]
+        php: [ '8.2', '8.3', '8.4' ]
+        symfony: [ '6.4.*', '7.0.*', '7.1.*', '7.2.*' ]
+
+    steps:
+      - uses: actions/checkout@master
+        with:
+          fetch-depth: ${{ (matrix.php == '8.2' && matrix.symfony == '6.4.*') && '0' || '1' }}
+
+      - name: Setup PHP ${{ matrix.php }}
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          tools: flex
+
+      - name: Download dependencies
+        env:
+          SYMFONY_REQUIRE: ${{ matrix.symfony }}
+        uses: ramsey/composer-install@v3
+
+      - name: Run test suite on PHP ${{ matrix.php }} and Symfony ${{ matrix.symfony }}
+        run: ./vendor/bin/phpunit
+
+      - name: Fix paths for Sonar
+        if: matrix.php == '8.2' && matrix.symfony == '6.4.*'
+        working-directory: ./build/reports/
+        run: sed -i 's/\/home\/runner\/work\/user-bundle\/user-bundle\//\/github\/workspace\//g' phpunit.coverage.xml
+
+      # Uncomment to activate SonarCloud Scan
+      # - name: SonarCloud Scan
+      #   if: matrix.php == '8.2' && matrix.symfony == '6.4.*'
+      #   uses: SonarSource/sonarcloud-github-action@master
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
