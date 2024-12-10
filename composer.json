@@ -1,0 +1,63 @@
+{
+	"name": "idmarinas/idm-template-bundle",
+	"type": "template",
+	"license": "BSD-3-Clause",
+	"keywords": [
+		"template",
+		"symfony-bundle"
+	],
+	"authors": [
+		{
+			"name": "Iván Diaz Marinas (IDMarinas)",
+			"email": "35842929+idmarinas@users.noreply.github.com",
+			"homepage": "https://github.com/idmarinas/idm-template-bundle",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/idmarinas/idm-template-bundle/issues"
+	},
+	"minimum-stability": "stable",
+	"prefer-stable": true,
+	"require": {
+		"php": "^8.2",
+		"symfony/dependency-injection": "^6.4 | ^7.0",
+		"symfony/framework-bundle": "^6.4 | ^7.0"
+	},
+	"require-dev": {
+		"fakerphp/faker": "^1.24",
+		"phpunit/phpunit": "^9.6",
+		"rector/rector": "^1.2",
+		"symfony/console": "^6.4 | ^7.0",
+		"symfony/runtime": "^6.4 | ^7.0",
+		"twig/twig": "^2.16 | ^3.16"
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/package-versions-deprecated": true,
+			"symfony/flex": true,
+			"symfony/runtime": true
+		},
+		"optimize-autoloader": false,
+		"preferred-install": {
+			"*": "dist"
+		},
+		"sort-packages": true
+	},
+	"autoload": {
+		"psr-4": {
+			"Idm\\Bundle\\Template\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Idm\\Bundle\\Template\\Tests\\": "tests/"
+		}
+	},
+	"funding": [
+		{
+			"type": "paypal",
+			"url": "https://www.paypal.me/idmarinas"
+		}
+	]
+}
