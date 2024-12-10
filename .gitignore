@@ -1,0 +1,10 @@
+###> idmarinas/idm-template-bundle ###
+**/*.dist
+/build/
+/vendor/
+/var/
+/phpunit.xml
+!phpunit.xml.dist
+/.phpunit.result.cache
+/composer.lock
+###< idmarinas/idm-template-bundle ###
