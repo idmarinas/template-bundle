@@ -3,6 +3,7 @@
   <component name="Symfony2PluginSettings">
     <option name="directoryToApp" value="src" />
     <option name="twigBundleNamespaceSupport" value="true" />
+    <option name="dismissEnableNotification" value="true" />
     <option name="profilerCsvPath" value="" />
     <option name="routingFiles">
       <list>
