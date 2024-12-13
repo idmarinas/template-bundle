@@ -4,7 +4,7 @@
 /vendor/
 /var/
 /phpunit.xml
-!phpunit.xml.dist
+!/phpunit.xml.dist
 /.phpunit.result.cache
 /composer.lock
 ###< idmarinas/idm-template-bundle ###
