@@ -49,10 +49,10 @@ jobs:
       - name: Run test suite on PHP ${{ matrix.php }} and Symfony ${{ matrix.symfony }}
         run: ./vendor/bin/phpunit --exclude ignore
 
-      - name: Fix paths for Sonar
-        if: matrix.php == '8.2' && matrix.symfony == '6.4.*'
-        working-directory: ./build/reports/
-        run: sed -i 's/\/home\/runner\/work\/user-bundle\/user-bundle\//\/github\/workspace\//g' phpunit.coverage.xml
+      # - name: Fix paths for Sonar
+      #   if: matrix.php == '8.2' && matrix.symfony == '6.4.*'
+      #   working-directory: ./build/reports/
+      #   run: sed -i 's/\/home\/runner\/work\/user-bundle\/user-bundle\//\/github\/workspace\//g' phpunit.coverage.xml
 
       # Uncomment to activate SonarCloud Scan
       # - name: SonarCloud Scan
