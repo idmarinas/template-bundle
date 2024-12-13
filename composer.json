@@ -35,6 +35,7 @@
 	"config": {
 		"allow-plugins": {
 			"composer/package-versions-deprecated": true,
+			"idmarinas/composer-plugin": true,
 			"symfony/flex": true,
 			"symfony/runtime": true
 		},
