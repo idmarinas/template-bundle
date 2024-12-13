@@ -63,4 +63,4 @@
 [![Liberapay - Donate](https://img.shields.io/liberapay/receives/IDMarinas.svg?logo=liberapay&cacheSeconds=86400)](https://liberapay.com/IDMarinas/donate)
 [![Twitter](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&cacheSeconds=86400)](https://x.com/idmarinas)
 
-# IDMarinas PROJECT_NAME
+# IDMarinas Template Bundle
