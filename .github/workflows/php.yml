@@ -13,6 +13,8 @@ on:
       - 'migrations/**'
       - '**/docs/**'
       - '**/README.md'
+      - '**/COMMANDS.md'
+      - '**/TIPS.md'
       - '**/TODO.md'
       - '**/LICENSE'
       - rector.php
