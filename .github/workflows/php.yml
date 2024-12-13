@@ -1,13 +1,24 @@
 name: IDMarinas User Bundle Test Suite
 
-# Uncomment to activate this action
-# on:
-#   pull_request:
-#     types: [ opened, synchronize, reopened ]
-#     tags-ignore: [ dependencies, documentation ]
-#   push:
-#     branches:
-#       - master
+on:
+  pull_request:
+    types: [ opened, synchronize, reopened ]
+    tags-ignore: [ dependencies, documentation ]
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - '.deployer/**'
+      - '.docker/**'
+      - 'migrations/**'
+      - '**/docs/**'
+      - '**/README.md'
+      - '**/TODO.md'
+      - '**/LICENSE'
+      - rector.php
+      - .editorconfig
+      - .gitignore
+      - compose.yaml
 
 jobs:
   build:
