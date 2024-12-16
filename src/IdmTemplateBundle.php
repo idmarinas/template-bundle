@@ -2,9 +2,9 @@
 /**
  * Copyright 2024 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 10/12/2024, 14:24
+ * Last modified by "IDMarinas" on 16/12/2024, 19:06
  *
- * @project Idm Template Bundle
+ * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
  *
  * @file    IdmTemplateBundle.php

@@ -2,10 +2,10 @@
 /**
  * Copyright 2021-2024 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 29/11/24, 19:40
+ * Last modified by "IDMarinas" on 16/12/2024, 19:06
  *
- * @project IDMarinas Advertising Bundle
- * @see     https://github.com/idmarinas/advertising-bundle
+ * @project IDMarinas Template Bundle
+ * @see     https://github.com/idmarinas/idm-template-bundle
  *
  * @file    IntegrationTest.php
  * @date    13/02/2021
