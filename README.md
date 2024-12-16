@@ -57,3 +57,36 @@
 [![Twitter](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&cacheSeconds=86400)](https://x.com/idmarinas)
 
 # IDMarinas Template Bundle
+
+## Install this template
+
+#### Option 1
+
+> Use composer with a create-project
+
+````shell
+  composer create-project idmarinas/template-bundle path/repository
+````
+
+#### Option 2
+
+> Clone repository
+
+````shell
+  git clone https://github.com/idmarinas/template-bundle.git
+````
+
+#### Option 3
+
+> Visit [https://github.com/idmarinas/template-bundle](https://github.com/idmarinas/template-bundle) and click in button
+> **Use this template**
+
+## Customize template
+
+> For customize this template with your Name and Namespace use
+
+````shell
+  composer idm:customize:bundle
+````
+
+> Now only need to answer the questions
