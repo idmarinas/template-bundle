@@ -2,25 +2,18 @@
 
 [//]: # ([![Quality Gate Status]&#40;https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&metric=alert_status&#41;]&#40;https://sonarcloud.io/summary/new_code?id=SONAR_PROJECT_NAME_CHANGE_ME&#41;)
 
-[//]: # (![GitHub release]&#40;https://img.shields.io/github/release/idmarinas/REPOSITORY_NAME_CHANGE_ME.svg&#41;)
+![GitHub release](https://img.shields.io/github/release/idmarinas/template-bundle.svg)
+![GitHub Release Date](https://img.shields.io/github/release-date/idmarinas/template-bundle.svg)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/idmarinas/template-bundle.svg)
 
-[//]: # (![GitHub Release Date]&#40;https://img.shields.io/github/release-date/idmarinas/REPOSITORY_NAME_CHANGE_ME.svg&#41;)
+![GitHub issues](https://img.shields.io/github/issues/idmarinas/template-bundle.svg)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/idmarinas/template-bundle.svg)
+![Github commits (since latest release)](https://img.shields.io/github/commits-since/idmarinas/template-bundle/latest.svg)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/idmarinas/template-bundle.svg)
+![GitHub last commit](https://img.shields.io/github/last-commit/idmarinas/template-bundle.svg)
 
-[//]: # (![GitHub code size in bytes]&#40;https://img.shields.io/github/languages/code-size/idmarinas/REPOSITORY_NAME_CHANGE_ME.svg&#41;)
-
-[//]: # (![GitHub issues]&#40;https://img.shields.io/github/issues/idmarinas/REPOSITORY_NAME_CHANGE_ME.svg&#41;)
-
-[//]: # (![GitHub pull requests]&#40;https://img.shields.io/github/issues-pr/idmarinas/REPOSITORY_NAME_CHANGE_ME.svg&#41;)
-
-[//]: # (![Github commits &#40;since latest release&#41;]&#40;https://img.shields.io/github/commits-since/idmarinas/REPOSITORY_NAME_CHANGE_ME/latest.svg&#41;)
-
-[//]: # (![GitHub commit activity]&#40;https://img.shields.io/github/commit-activity/w/idmarinas/REPOSITORY_NAME_CHANGE_ME.svg&#41;)
-
-[//]: # (![GitHub last commit]&#40;https://img.shields.io/github/last-commit/idmarinas/REPOSITORY_NAME_CHANGE_ME.svg&#41;)
-
-[//]: # (![GitHub top language]&#40;https://img.shields.io/github/languages/top/idmarinas/REPOSITORY_NAME_CHANGE_ME.svg&#41;)
-
-[//]: # (![GitHub language count]&#40;https://img.shields.io/github/languages/count/idmarinas/REPOSITORY_NAME_CHANGE_ME.svg&#41;)
+![GitHub top language](https://img.shields.io/github/languages/top/idmarinas/template-bundle.svg)
+![GitHub language count](https://img.shields.io/github/languages/count/idmarinas/template-bundle.svg)
 
 [//]: # ([![Reliability Rating]&#40;https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&metric=reliability_rating&#41;]&#40;https://sonarcloud.io/dashboard?id=SONAR_PROJECT_NAME_CHANGE_ME&#41;)
 
