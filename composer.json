@@ -31,7 +31,7 @@
 		"rector/rector": "^1.2",
 		"symfony/console": "^6.4 | ^7.0",
 		"symfony/runtime": "^6.4 | ^7.0",
-		"twig/twig": "^2.16 | ^3.16"
+		"twig/twig": "^3.16"
 	},
 	"config": {
 		"allow-plugins": {
