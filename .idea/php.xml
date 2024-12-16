@@ -75,6 +75,10 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/symfony/lock" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/vendor/idmarinas/composer-plugin" />
       <path value="$PROJECT_DIR$/bundles/composer-plugin/vendor/seld/phar-utils" />
       <path value="$PROJECT_DIR$/bundles/composer-plugin/vendor/seld/signal-handler" />
       <path value="$PROJECT_DIR$/bundles/composer-plugin/vendor/react/promise" />
@@ -101,9 +105,6 @@
       <path value="$PROJECT_DIR$/bundles/composer-plugin/vendor/symfony/translation-contracts" />
       <path value="$PROJECT_DIR$/bundles/composer-plugin/vendor/symfony/polyfill-php83" />
       <path value="$PROJECT_DIR$/bundles/composer-plugin/vendor/symfony/lock" />
-      <path value="$PROJECT_DIR$/vendor/symfony/lock" />
-      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
       <path value="$PROJECT_DIR$/bundles.dist/composer-plugin/vendor/react/promise" />
       <path value="$PROJECT_DIR$/bundles.dist/composer-plugin/vendor/justinrainbow/json-schema" />
       <path value="$PROJECT_DIR$/bundles.dist/composer-plugin/vendor/symfony/validator" />
@@ -134,7 +135,7 @@
   </component>
   <component name="PhpInterpreters">
     <interpreters>
-      <interpreter id="13461587-1585-4c8e-9424-1805ffa131bb" name="php-docker" home="docker-compose://DATA" auto="false" debugger_id="php.debugger.XDebug">
+      <interpreter id="cb4b9469-7674-46de-b03c-0507f560df64" name="php-docker" home="docker-compose://DATA" auto="false" debugger_id="php.debugger.XDebug">
         <remote_data INTERPRETER_PATH="php" HELPERS_PATH="/opt/.phpstorm_helpers" VALID="true" RUN_AS_ROOT_VIA_SUDO="false" DOCKER_ACCOUNT_NAME="Docker" DOCKER_COMPOSE_SERVICE_NAME="php" DOCKER_REMOTE_PROJECT_PATH="/opt/project">
           <type_data command="RUN" />
           <dockerComposeConfigurationPaths>
@@ -312,7 +313,7 @@
   </component>
   <component name="PhpUnit">
     <phpunit_settings>
-      <PhpUnitSettings configuration_file_path="$PROJECT_DIR$/phpunit.xml" custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" phpunit_phar_path="" use_configuration_file="true" />
+      <PhpUnitSettings configuration_file_path="$PROJECT_DIR$/phpunit.xml" custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" use_configuration_file="true" />
     </phpunit_settings>
   </component>
   <component name="PsalmOptionsConfiguration">
