@@ -25,13 +25,16 @@
 		"symfony/framework-bundle": "^6.4 | ^7.0"
 	},
 	"require-dev": {
-		"fakerphp/faker": "^1.24",
+		"dama/doctrine-test-bundle": "^8.2",
+		"doctrine/doctrine-fixtures-bundle": "^4.0",
 		"idmarinas/composer-plugin": "^1.0.0",
 		"phpunit/phpunit": "^9.6",
 		"rector/rector": "^1.2",
 		"symfony/console": "^6.4 | ^7.0",
+		"symfony/phpunit-bridge": "^7.2",
 		"symfony/runtime": "^6.4 | ^7.0",
-		"twig/twig": "^3.16"
+		"twig/twig": "^3.16",
+		"zenstruck/foundry": "^2.3"
 	},
 	"config": {
 		"allow-plugins": {
@@ -53,7 +56,9 @@
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"Idm\\Bundle\\Template\\Tests\\": "tests/"
+			"Idm\\Bundle\\Template\\Tests\\": "tests/",
+			"DataFixtures\\": "fixtures/",
+			"Factory\\": "factories/"
 		}
 	},
 	"funding": [
