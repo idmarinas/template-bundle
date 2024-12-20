@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!--~
+  ~ Copyright 2024 (C) IDMarinas - All Rights Reserved
+  ~
+  ~ Last modified by "IDMarinas" on 20/12/2024, 18:39
+  ~
+  ~ @project IDMarinas Template Bundle
+  ~ @see https://github.com/idmarinas/idm-template-bundle
+  ~
+  ~ @file phpunit.xml.dist
+  ~ @date 20/12/2024
+  ~ @time 18:48
+  ~
+  ~ @author Iván Diaz Marinas (IDMarinas)
+  ~ @license BSD 3-Clause License
+  ~
+  ~ @since 1.0.0
+  -->
+
 <!-- https://phpunit.readthedocs.io/en/latest/configuration.html -->
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
@@ -47,4 +65,8 @@
 	<logging>
 		<junit outputFile="./build/reports/phpunit.xml" />
 	</logging>
+
+	<extensions>
+		<extension class="DAMA\DoctrineTestBundle\PHPUnit\PHPUnitExtension" />
+	</extensions>
 </phpunit>
