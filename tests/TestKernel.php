@@ -2,7 +2,7 @@
 /**
  * Copyright 2024 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 20/12/2024, 17:45
+ * Last modified by "IDMarinas" on 20/12/2024, 18:45
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -19,6 +19,7 @@
 
 namespace Idm\Bundle\Template\Tests;
 
+use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
 use Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle;
 use Idm\Bundle\Template\IdmTemplateBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
@@ -41,6 +42,7 @@ final class TestKernel extends Kernel
 	{
 		yield new FrameworkBundle();
 		yield new IdmTemplateBundle();
+		yield new DoctrineBundle();
 
 		// Dev-Test Bundles
 		yield new DoctrineFixturesBundle();
@@ -66,33 +68,37 @@ final class TestKernel extends Kernel
 				'validation' => false,
 				'mailer'     => false,
 				'session'    => [
+					'cookie_secure'      => true,
+					'cookie_samesite'    => 'lax',
 					'storage_factory_id' => 'session.storage.factory.mock_file',
 				],
 			]);
 
-//			// Uncomment for activate Doctrine
-//			$container->loadFromExtension('doctrine', [
-//				'dbal' => [
-//					'driver' => 'pdo_sqlite',
-//					'url'    => sprintf('sqlite:///%s/idm_user_%s.sqlite', $this->getDatabaseCache(), $this->environment),
-//				],
-//				'orm'  => [
-//					'enable_lazy_ghost_objects'   => true,
-//					'auto_generate_proxy_classes' => true,
-//					'auto_mapping'                => false,
-//					'mappings'                    => [
-//						'IdmTestBundle' => [
-//							'mapping' => true,
-//							'type'    => 'attribute',
-//							'dir'     => __DIR__ . '/Fixtures/Entity',
-//							'prefix'  => 'Idm\Bundle\Template\Tests\Fixtures\Entity',
-//						],
-//					],
-//					'resolve_target_entities' => [
-//						AbstractEntity::class => Entity::class,
-//					],
-//				],
-//			]);
+			$container->loadFromExtension('doctrine', [
+				'dbal' => [
+					'driver' => 'pdo_sqlite',
+					'url'    => sprintf('sqlite:///%s/idm_user_%s.sqlite', $this->getDatabaseCache(), $this->environment),
+				],
+				'orm'  => [
+					'enable_lazy_ghost_objects'   => true,
+					'auto_generate_proxy_classes' => true,
+					'auto_mapping'                => false,
+					'controller_resolver'         => [
+						'auto_mapping' => false,
+					],
+					'mappings'                    => [
+						'IdmTestBundle' => [
+							'mapping' => true,
+							'type'    => 'attribute',
+							'dir'     => __DIR__ . '/Fixtures/Entity',
+							'prefix'  => 'Idm\Bundle\Template\Tests\Fixtures\Entity',
+						],
+					],
+					//'resolve_target_entities' => [
+					//	AbstractEntity::class => Entity::class,
+					//],
+				],
+			]);
 
 			$container
 				->register('kernel', static::class)
