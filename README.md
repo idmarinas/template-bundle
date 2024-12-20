@@ -64,21 +64,13 @@
 
 #### Option 1
 
-> Use composer with a create-project
-
-````shell
-  composer create-project idmarinas/template-bundle path/repository
-````
-
-#### Option 2
-
 > Clone repository
 
 ````shell
   git clone https://github.com/idmarinas/template-bundle.git
 ````
 
-#### Option 3
+#### Option 2
 
 > Visit [https://github.com/idmarinas/template-bundle](https://github.com/idmarinas/template-bundle) and click in button
 > **Use this template**
@@ -88,6 +80,7 @@
 > For customize this template with your Name and Namespace use
 
 ````shell
+  composer install
   composer idm:customize:bundle
 ````
 
