@@ -58,6 +58,8 @@
 
 # IDMarinas Template Bundle
 
+<!-- readme-template -->
+
 ## Install this template
 
 #### Option 1
@@ -90,3 +92,4 @@
 ````
 
 > Now only need to answer the questions
+<!-- readme-template -->
