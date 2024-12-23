@@ -2,7 +2,7 @@
 /**
  * Copyright 2024 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 20/12/2024, 18:45
+ * Last modified by "IDMarinas" on 23/12/2024, 20:54
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -56,18 +56,24 @@ final class TestKernel extends Kernel
 	{
 		$loader->load(function (ContainerBuilder $container) use ($loader) {
 			$container->loadFromExtension('framework', [
-				'test'       => true,
-				'router'     => [
+				'test'                  => true,
+				'http_method_override'  => false,
+				'handle_all_throwables' => true,
+				'php_errors'            => [
+					'log' => true,
+				],
+				'router'                => [
 					'resource'  => 'kernel::loadRoutes',
 					'type'      => 'service',
 					'utf8'      => true,
 					'cache_dir' => $this->getCacheDir(),
 				],
-				'secret'     => 'test',
-				'form'       => false,
-				'validation' => false,
-				'mailer'     => false,
-				'session'    => [
+				'secret'                => 'test',
+				'form'                  => false,
+				'validation'            => false,
+				'mailer'                => false,
+				'session'               => [
+					'handler_id'         => null,
 					'cookie_secure'      => true,
 					'cookie_samesite'    => 'lax',
 					'storage_factory_id' => 'session.storage.factory.mock_file',
