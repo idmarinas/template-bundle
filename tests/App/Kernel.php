@@ -2,7 +2,7 @@
 /**
  * Copyright 2024 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 27/12/2024, 14:39
+ * Last modified by "IDMarinas" on 27/12/2024, 14:41
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -27,7 +27,6 @@ use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;
 use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 use Zenstruck\Foundry\ZenstruckFoundryBundle;
@@ -80,18 +79,5 @@ final class Kernel extends BaseKernel
 		$routes->import($this->getConfigDir() . '/routes.php');
 
 		$routes->add('app_home', '/')->methods(['GET']);
-	}
-
-	public function getDatabaseCache (): string
-	{
-		$dir = $this->getProjectDir() . '/var/cache/database';
-
-		$filesystem = new Filesystem();
-
-		if (!$filesystem->exists($dir)) {
-			$filesystem->mkdir($dir);
-		}
-
-		return $dir;
 	}
 }
