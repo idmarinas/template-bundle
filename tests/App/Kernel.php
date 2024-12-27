@@ -2,7 +2,7 @@
 /**
  * Copyright 2024 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 27/12/2024, 14:41
+ * Last modified by "IDMarinas" on 27/12/2024, 14:43
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -19,6 +19,7 @@
 
 namespace Idm\Bundle\Template\Tests\App;
 
+use DAMA\DoctrineTestBundle\DAMADoctrineTestBundle;
 use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
 use Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle;
 use Exception;
@@ -47,6 +48,7 @@ final class Kernel extends BaseKernel
 		yield new DoctrineBundle();
 
 		// Dev-Test Bundles
+		yield new DAMADoctrineTestBundle();
 		yield new DoctrineFixturesBundle();
 		yield new ZenstruckFoundryBundle();
 	}
