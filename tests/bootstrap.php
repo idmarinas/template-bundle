@@ -2,7 +2,7 @@
 /**
  * Copyright 2024 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 27/12/2024, 14:27
+ * Last modified by "IDMarinas" on 30/12/2024, 17:41
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -17,7 +17,7 @@
  * @since   1.0.0
  */
 
-use Idm\Bundle\Template\Tests\App\Kernel;
+use App\Kernel;
 use Symfony\Component\Filesystem\Filesystem;
 
 require dirname(__DIR__) . '/vendor/autoload.php';
