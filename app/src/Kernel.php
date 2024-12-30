@@ -2,7 +2,7 @@
 /**
  * Copyright 2024 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 30/12/2024, 17:53
+ * Last modified by "IDMarinas" on 30/12/2024, 18:28
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -39,9 +39,9 @@ final class Kernel extends BaseKernel
 			->add('app_home', '/')
 			->methods(['GET'])
 			->controller(TemplateController::class)
-			->defaults([
-				'template' => 'path/to/template.html.twig',
-			])
+			//->defaults([
+			//	'template' => 'path/to/template.html.twig',
+			//])
 		;
 	}
 
@@ -54,13 +54,7 @@ final class Kernel extends BaseKernel
 
 		// Load config for Test App
 		$loader->load($this->getTestPackagesConfigDir() . '/framework.php');
-		$loader->load($this->getTestPackagesConfigDir() . '/framework/mailer.php');
-		$loader->load($this->getTestPackagesConfigDir() . '/framework/router.php');
-		$loader->load($this->getTestPackagesConfigDir() . '/framework/session.php');
-		$loader->load($this->getTestPackagesConfigDir() . '/framework/validation.php');
 		$loader->load($this->getTestPackagesConfigDir() . '/doctrine.php');
-		$loader->load($this->getTestPackagesConfigDir() . '/security.php');
-		$loader->load($this->getTestPackagesConfigDir() . '/stof_doctrine_extensions.php');
 
 		// Load service of Bundle
 		$loader->load($this->getTestConfigDir() . '/service.php');
