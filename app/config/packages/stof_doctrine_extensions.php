@@ -2,14 +2,14 @@
 /**
  * Copyright 2024 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 27/12/2024, 14:36
+ * Last modified by "IDMarinas" on 30/12/2024, 17:53
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
  *
  * @file    stof_doctrine_extensions.php
- * @date    27/12/2024
- * @time    14:41
+ * @date    30/12/2024
+ * @time    17:53
  *
  * @author  Iván Diaz Marinas (IDMarinas)
  * @license BSD 3-Clause License

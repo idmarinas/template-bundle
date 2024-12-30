@@ -2,14 +2,14 @@
 /**
  * Copyright 2024 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 27/12/2024, 14:39
+ * Last modified by "IDMarinas" on 30/12/2024, 17:53
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
  *
  * @file    doctrine.php
- * @date    27/12/2024
- * @time    14:41
+ * @date    30/12/2024
+ * @time    17:53
  *
  * @author  Iván Diaz Marinas (IDMarinas)
  * @license BSD 3-Clause License
@@ -23,7 +23,7 @@ use Symfony\Component\Filesystem\Filesystem;
 
 return static function (ContainerConfigurator $container) {
 	$getDatabaseCache = function (): string {
-		$dir = dirname(__DIR__, 2) . '/var/cache/database';
+		$dir = dirname(__DIR__, 3) . '/var/cache/database';
 
 		$filesystem = new Filesystem();
 
@@ -37,7 +37,7 @@ return static function (ContainerConfigurator $container) {
 	$container->extension('doctrine', [
 		'dbal' => [
 			'driver'         => 'pdo_sqlite',
-			'url'            => sprintf('sqlite:///%s/idm_bundle_%s.sqlite', $getDatabaseCache(), $container->env()),
+			'url'            => sprintf('sqlite:///%s/idm_user_%s.sqlite', $getDatabaseCache(), $container->env()),
 			'use_savepoints' => true,
 		],
 		'orm'  => [
@@ -52,13 +52,13 @@ return static function (ContainerConfigurator $container) {
 					'is_bundle' => false,
 					'mapping'   => true,
 					'type'      => 'attribute',
-					'dir'       => dirname(__DIR__) . '/App/Entity',
-					'prefix'    => 'Idm\Bundle\Template\Tests\App\Entity',
+					'dir'       => dirname(__DIR__, 2) . '/src/Entity',
+					'prefix'    => 'App\Entity',
 				],
+				//'resolve_target_entities' => [
+				//	AbstractUser::class => User::class,
+				//],
 			],
-			//'resolve_target_entities' => [
-			//	AbstractUser::class => User::class,
-			//],
 		],
 	]);
 };
