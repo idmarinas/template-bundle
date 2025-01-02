@@ -12,6 +12,7 @@ on:
       - '.docker/**'
       - 'migrations/**'
       - '**/docs/**'
+      - '**/Writerside/**'
       - '**/README.md'
       - '**/COMMANDS.md'
       - '**/TIPS.md'
