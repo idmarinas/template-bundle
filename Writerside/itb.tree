@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+	SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="itb"
+                  name="IDMarinas Template Bundle"
+                  start-page="Index.md">
+
+	<toc-element topic="Index.md" />
+	<toc-element toc-title="Installation Guide">
+		<toc-element topic="Requirements.md" />
+		<toc-element topic="Installation.md" />
+		<toc-element topic="Configuration.md" />
+	</toc-element>
+</instance-profile>

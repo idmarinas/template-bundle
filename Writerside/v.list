@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE vars SYSTEM "https://resources.jetbrains.com/writerside/1.0/vars.dtd">
+<vars>
+	<var name="project" value="IDMarinas Template Bundle" />
+	<var name="package_name" value="idmarinas/template-bundle" />
+	<var name="last_version" value="1.0.0" />
+	<var name="branch" value="1.x" />
+</vars>
