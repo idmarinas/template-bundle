@@ -1,23 +1,35 @@
-[![Test Suite](https://github.com/idmarinas/template-bundle/actions/workflows/php.yml/badge.svg)](https://github.com/idmarinas/template-bundle/actions/workflows/php.yml)
+<!--suppress HtmlDeprecatedAttribute -->
+<div align="center">
 
-[//]: # ([![Quality Gate Status]&#40;https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&metric=alert_status&#41;]&#40;https://sonarcloud.io/summary/new_code?id=SONAR_PROJECT_NAME_CHANGE_ME&#41;)
-<!-- spacer -->
+# IDMarinas Template Bundle
 
-[//]: # (![GitHub release]&#40;https://img.shields.io/github/release/idmarinas/REPOSITORY_NAME_CHANGE_ME.svg&#41;)
+</div>
 
-[//]: # (![GitHub Release Date]&#40;https://img.shields.io/github/release-date/idmarinas/REPOSITORY_NAME_CHANGE_ME.svg&#41;)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/idmarinas/template-bundle.svg)
-<!-- spacer -->
-![GitHub issues](https://img.shields.io/github/issues/idmarinas/template-bundle.svg)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/idmarinas/template-bundle.svg)
+> Short description for Bundle
 
-[//]: # (![Github commits &#40;since latest release&#41;]&#40;https://img.shields.io/github/commits-since/idmarinas/REPOSITORY_NAME_CHANGE_ME/latest.svg&#41;)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/w/idmarinas/template-bundle.svg)
-![GitHub last commit](https://img.shields.io/github/last-commit/idmarinas/template-bundle.svg)
-<!-- spacer -->
-![GitHub top language](https://img.shields.io/github/languages/top/idmarinas/template-bundle.svg)
-![GitHub language count](https://img.shields.io/github/languages/count/idmarinas/template-bundle.svg)
-<!-- spacer -->
+<br />
+
+<div align="center">
+
+[![Test Suite](https://img.shields.io/github/actions/workflow/status/idmarinas/template-bundle/php.yml?style=for-the-badge&logo=github&logoColor=white&label=Bundle%20Test%20Suite)](https://github.com/idmarinas/template-bundle/actions/workflows/php.yml)
+
+[//]: # ([![Quality Gate Status]&#40;https://img.shields.io/sonar/quality_gate/SONAR_PROJECT_NAME_CHANGE_ME?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white&#41;]&#40;https://sonarcloud.io/summary/new_code?id=SONAR_PROJECT_NAME_CHANGE_ME&#41;)
+
+[//]: # ([![Coverage]&#40;https://img.shields.io/sonar/coverage/SONAR_PROJECT_NAME_CHANGE_ME?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white&#41;]&#40;https://sonarcloud.io/dashboard?id=SONAR_PROJECT_NAME_CHANGE_ME&#41;)
+
+[//]: # ([![Technical Debt]&#40;https://img.shields.io/sonar/tech_debt/SONAR_PROJECT_NAME_CHANGE_ME?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white&#41;]&#40;https://sonarcloud.io/dashboard?id=SONAR_PROJECT_NAME_CHANGE_ME&#41;)
+
+<br />
+
+[//]: # (![GitHub release]&#40;https://img.shields.io/github/release/REPOSITORY_NAME_CHANGE_ME.svg?style=for-the-badge&#41;)
+
+[//]: # (![GitHub Release Date]&#40;https://img.shields.io/github/release-date/REPOSITORY_NAME_CHANGE_ME.svg?style=for-the-badge&#41;)
+
+[//]: # (![Github commits &#40;since latest release&#41;]&#40;https://img.shields.io/github/commits-since/REPOSITORY_NAME_CHANGE_ME/latest.svg?style=for-the-badge&#41;)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/idmarinas/template-bundle.svg?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/idmarinas/template-bundle.svg?style=for-the-badge)
+
+#### Code analysis
 
 [//]: # ([![Reliability Rating]&#40;https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&metric=reliability_rating&#41;]&#40;https://sonarcloud.io/dashboard?id=SONAR_PROJECT_NAME_CHANGE_ME&#41;)
 
@@ -29,37 +41,21 @@
 
 [//]: # ([![Maintainability Rating]&#40;https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&metric=sqale_rating&#41;]&#40;https://sonarcloud.io/dashboard?id=SONAR_PROJECT_NAME_CHANGE_ME&#41;)
 
-[//]: # ([![Technical Debt]&#40;https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&metric=sqale_index&#41;]&#40;https://sonarcloud.io/dashboard?id=SONAR_PROJECT_NAME_CHANGE_ME&#41;)
-
 [//]: # ([![Code Smells]&#40;https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&metric=code_smells&#41;]&#40;https://sonarcloud.io/dashboard?id=SONAR_PROJECT_NAME_CHANGE_ME&#41;)
 
-[//]: # ([![Coverage]&#40;https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&metric=coverage&#41;]&#40;https://sonarcloud.io/dashboard?id=SONAR_PROJECT_NAME_CHANGE_ME&#41;)
-
 [//]: # ([![Duplicated Lines &#40;%&#41;]&#40;https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&metric=duplicated_lines_density&#41;]&#40;https://sonarcloud.io/dashboard?id=SONAR_PROJECT_NAME_CHANGE_ME&#41;)
-<!-- spacer -->
 
-[//]: # (![Dependabot]&#40;https://img.shields.io/badge/dependabot-025E8C?style=flat&logo=dependabot&logoColor=white&#41;)
+</div>
 
-[//]: # ([![Gulp]&#40;https://img.shields.io/badge/gulp-%23CF4647.svg?style=flat&logo=gulp&logoColor=white&#41;]&#40;https://gulpjs.com/&#41;)
+> ## 🖖 Support
+>
+> 🩵 If you like this project, give it a 🌟 and share it with your friends!
+>
+> [![PayPal.Me - The safer, easier way to pay online!](https://img.shields.io/badge/donate-help_my_projects-ffaa29.svg?style=for-the-badge&logo=paypal&cacheSeconds=86400)](https://www.paypal.me/idmarinas)
+> [![Liberapay - Donate](https://img.shields.io/liberapay/receives/IDMarinas.svg?style=for-the-badge&logo=liberapay&cacheSeconds=86400)](https://liberapay.com/IDMarinas/donate)
+> [![Static Badge](https://img.shields.io/badge/Sponsor-ea4aaa?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sponsors/idmarinas)
 
-[//]: # ([![Webpack]&#40;https://img.shields.io/badge/webpack-%238DD6F9.svg?style=flat&logo=webpack&logoColor=white&#41;]&#40;https://webpack.js.org&#41;)
-[![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=flat&logo=php&logoColor=white)](https://www.php.net)
-[![Composer](https://img.shields.io/badge/composer-%238c5530.svg?style=flat&logo=composer&logoColor=white)](https://getcomposer.org)
-[![Symfony](https://img.shields.io/badge/symfony-black.svg?style=flat&logo=symfony&logoColor=white)](https://www.symfony.com)
-
-[//]: # ([![Doctrine]&#40;https://img.shields.io/badge/doctrine-fa6a3c?style=flat&logo=doctrine&logoColor=white&#41;]&#40;https://www.doctrine-project.org&#41;)
-
-[//]: # ([![TailwindCSS]&#40;https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=flat&logo=tailwind-css&logoColor=white&#41;]&#40;https://www.tailwindcss.com&#41;)
-
-[//]: # ([![Stimulus]&#40;https://img.shields.io/badge/stimulus-77e8b9?logo=stimulus&logoColor=white&logoSize=auto&#41;]&#40;https://stimulus.hotwired.dev&#41;)
-
-[//]: # ([![Turbo]&#40;https://img.shields.io/badge/turbo-5cd8e5?logo=turbo&logoColor=white&logoSize=auto&#41;]&#40;https://turbo.hotwired.dev&#41;)
-<!-- spacer -->
-[![PayPal.Me - The safer, easier way to pay online!](https://img.shields.io/badge/donate-help_my_project-ffaa29.svg?logo=paypal&cacheSeconds=86400)](https://www.paypal.me/idmarinas)
-[![Liberapay - Donate](https://img.shields.io/liberapay/receives/IDMarinas.svg?logo=liberapay&cacheSeconds=86400)](https://liberapay.com/IDMarinas/donate)
-[![Twitter](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&cacheSeconds=86400)](https://x.com/idmarinas)
-
-# IDMarinas Template Bundle
+<br />
 
 <!-- readme-template -->
 
@@ -90,10 +86,15 @@
 > Now only need to answer the questions
 <!-- readme-template -->
 
-> ## 🖖 Support
->
-> 💙 If you like this project, give it a ⭐ and share it with your friends!
->
-> [![PayPal.Me - The safer, easier way to pay online!](https://img.shields.io/badge/donate-help_my_projects-ffaa29.svg?style=for-the-badge&logo=paypal&cacheSeconds=86400)](https://www.paypal.me/idmarinas)
-> [![Liberapay - Donate](https://img.shields.io/liberapay/receives/IDMarinas.svg?style=for-the-badge&logo=liberapay&cacheSeconds=86400)](https://liberapay.com/IDMarinas/donate)
-> [![Static Badge](https://img.shields.io/badge/Sponsor-ea4aaa?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sponsors/idmarinas)
+## 🖱️ Tech used in code
+
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/idmarinas/template-bundle.svg?style=for-the-badge)
+[![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net)
+[![Symfony](https://img.shields.io/badge/symfony-black.svg?style=for-the-badge&logo=symfony&logoColor=white)](https://www.symfony.com)
+
+## 🛠️ Tools used for create this project
+
+![Dependabot](https://img.shields.io/badge/dependabot-025E8C?style=for-the-badge&logo=dependabot&logoColor=white)
+[![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/features/actions)
+[![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com)
+[![Composer](https://img.shields.io/badge/composer-%238c5530?style=for-the-badge&logo=composer&logoColor=white)](https://getcomposer.org)
