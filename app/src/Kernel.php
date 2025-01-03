@@ -1,8 +1,8 @@
 <?php
 /**
- * Copyright 2024 (C) IDMarinas - All Rights Reserved
+ * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 30/12/2024, 18:28
+ * Last modified by "IDMarinas" on 03/01/2025, 19:25
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -30,10 +30,20 @@ final class Kernel extends BaseKernel
 {
 	use MicroKernelTrait;
 
+	private array $extraBundles = [];
+	private array $extraRoutes  = [];
+	private array $extraConfig  = [];
+
 	public function configureRoutes (RoutingConfigurator $routes): void
 	{
 		$routes->import($this->getConfigDir() . '/routes.php');
-		$routes->import('security.route_loader.logout', 'service')->methods(['GET']);
+//		$routes->import('security.route_loader.logout', 'service')->methods(['GET']);
+
+		$extraRoutes = array_unique($this->extraRoutes);
+
+		foreach ($extraRoutes as $route) {
+			$routes->import($route);
+		}
 
 		$routes
 			->add('app_home', '/')
@@ -43,6 +53,46 @@ final class Kernel extends BaseKernel
 			//	'template' => 'path/to/template.html.twig',
 			//])
 		;
+	}
+
+	public function addExtraBundle (string $bundleName): self
+	{
+		$this->extraBundles[$bundleName] = ['all' => true];
+
+		return $this;
+	}
+
+	public function addExtraConfigFile (string $config): self
+	{
+		$this->extraConfig[] = $config;
+
+		return $this;
+	}
+
+	public function addExtraRoutesFile (string $route): self
+	{
+		$this->extraRoutes[] = $route;
+
+		return $this;
+	}
+
+	public function registerBundles (): iterable
+	{
+		$contents = require $this->getBundlesPath();
+		$contents = array_merge($contents, $this->extraBundles);
+
+		foreach ($contents as $class => $envs) {
+			if ($envs[$this->environment] ?? $envs['all'] ?? false) {
+				yield new $class();
+			}
+		}
+	}
+
+	public function handleOptions (array $options): void
+	{
+		if (array_key_exists('config', $options) && is_callable($config = $options['config'])) {
+			$config($this);
+		}
 	}
 
 	/**
@@ -57,11 +107,17 @@ final class Kernel extends BaseKernel
 		$loader->load($this->getTestPackagesConfigDir() . '/doctrine.php');
 
 		// Load service of Bundle
-		$loader->load($this->getTestConfigDir() . '/service.php');
+		$loader->load($this->getTestConfigDir() . '/services.php');
 
 		// Load Fixtures and Factories of Bundle
 		$loader->load($this->getConfigDir() . '/factories.php');
 		$loader->load($this->getConfigDir() . '/fixtures.php');
+
+		$extraConfig = array_unique($this->extraConfig);
+
+		foreach ($extraConfig as $config) {
+			$loader->load($config);
+		}
 	}
 
 	private function getBundlesPath (): string
