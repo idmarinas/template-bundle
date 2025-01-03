@@ -1,8 +1,8 @@
 <?php
 /**
- * Copyright 2024 (C) IDMarinas - All Rights Reserved
+ * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 16/12/2024, 19:06
+ * Last modified by "IDMarinas" on 02/01/2025, 23:32
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -27,6 +27,6 @@ final class IdmTemplateBundle extends AbstractBundle
 {
 	public function loadExtension (array $config, ContainerConfigurator $container, ContainerBuilder $builder): void
 	{
-		$container->import('../config/service.php');
+		$container->import(dirname(__DIR__) . '/config/services.php');
 	}
 }
