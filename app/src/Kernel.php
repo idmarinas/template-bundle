@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 03/01/2025, 19:42
+ * Last modified by "IDMarinas" on 04/01/2025, 24:43
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -62,9 +62,13 @@ final class Kernel extends BaseKernel
 		return $this;
 	}
 
-	public function addExtraConfigFile (string $config): self
+	public function addExtraConfig (string|array $config): self
 	{
-		$this->extraConfig[] = $config;
+		if (is_array($config)) {
+			$this->extraConfig = array_merge($this->extraConfig, $config);
+		} else {
+			$this->extraConfig[] = $config;
+		}
 
 		return $this;
 	}
@@ -147,10 +151,12 @@ final class Kernel extends BaseKernel
 		$loader->load($this->getConfigDir() . '/factories.php');
 		$loader->load($this->getConfigDir() . '/fixtures.php');
 
-		$extraConfig = array_unique($this->extraConfig);
-
-		foreach ($extraConfig as $config) {
-			$loader->load($config);
+		foreach ($this->extraConfig as $extension => $config) {
+			if (is_array($config)) {
+				$container->loadFromExtension($extension, $config);
+			} else {
+				$loader->load($config);
+			}
 		}
 	}
 
