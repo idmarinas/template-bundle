@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 03/01/2025, 19:25
+ * Last modified by "IDMarinas" on 03/01/2025, 19:42
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -88,6 +88,40 @@ final class Kernel extends BaseKernel
 		}
 	}
 
+	/**
+	 * For add more config/routes/bundles to kernel
+	 *
+	 * <code>
+	 *   <?php
+	 *    use Symfony\Bundle\FrameworkBundle\Test\{
+	 *      KernelTestCase,
+	 *      WebTestCase
+	 *    };
+	 *
+	 *    class TestKernel extends [(KernelTestCase|WebTestCase)]
+	 *    {
+	 *      public function testAnything (): void
+	 *      {
+	 *        $kernel = self::bootKernel([
+	 *          'config' => static function (Kernel $kernel) {
+	 *            $kernel->addExtraBundle(BundleName::class);
+	 *            $kernel->addExtraConfigFile('path/to/file.php');
+	 *            $kernel->addExtraRoutesFile('path/to/file.php');
+	 *          }
+	 *        ]);
+	 *      }
+	 *
+	 *      #[Override]
+	 *      protected static function createKernel (array $options = []): KernelInterface
+	 *      {
+	 *        $kernel = parent::createKernel($options);
+	 *        $kernel->handleOptions($options);
+	 *
+	 *        return $kernel;
+	 *      }
+	 *    }
+	 * </code>
+	 */
 	public function handleOptions (array $options): void
 	{
 		if (array_key_exists('config', $options) && is_callable($config = $options['config'])) {
