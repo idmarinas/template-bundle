@@ -3,7 +3,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 03/01/2025, 19:46
+ * Last modified by "IDMarinas" on 04/01/2025, 24:45
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -41,7 +41,8 @@ final class BundleInitializationTest extends KernelTestCase
 		$kernel = self::bootKernel([
 			'config' => static function (Kernel $kernel) {
 //				$kernel->addExtraBundle(BundleName::class);
-//				$kernel->addExtraConfigFile('path/to/file.php');
+//				$kernel->addExtraConfig('path/to/file.php');
+//				$kernel->addExtraConfig(['extension_name' => ['key_1' => 'value_1']);
 //				$kernel->addExtraRoutesFile('path/to/file.php');
 			},
 		]);
