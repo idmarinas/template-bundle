@@ -5,8 +5,7 @@ on:
     types: [ opened, synchronize, reopened ]
     tags-ignore: [ dependencies, documentation ]
   push:
-    branches:
-      - master
+    branches: [ master, main ]
     paths-ignore:
       - '.deployer/**'
       - '.docker/**'
