@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Symfony2PluginSettings">
     <option name="directoryToApp" value="src" />
+    <option name="pluginEnabled" value="true" />
     <option name="twigBundleNamespaceSupport" value="true" />
     <option name="dismissEnableNotification" value="true" />
     <option name="profilerCsvPath" value="" />
