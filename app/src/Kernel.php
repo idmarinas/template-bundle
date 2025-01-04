@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 04/01/2025, 24:43
+ * Last modified by "IDMarinas" on 04/01/2025, 12:15
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -143,6 +143,7 @@ final class Kernel extends BaseKernel
 		// Load config for Test App
 		$loader->load($this->getTestPackagesConfigDir() . '/framework.php');
 		$loader->load($this->getTestPackagesConfigDir() . '/doctrine.php');
+		$loader->load($this->getTestPackagesConfigDir() . '/maker.php');
 
 		// Load service of Bundle
 		$loader->load($this->getTestConfigDir() . '/services.php');

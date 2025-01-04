@@ -31,6 +31,7 @@
 		"phpunit/phpunit": "^9.6",
 		"rector/rector": "^1.2",
 		"symfony/console": "^6.4 | ^7.0",
+		"symfony/maker-bundle": "^1.61",
 		"symfony/phpunit-bridge": "^7.2",
 		"symfony/runtime": "^6.4 | ^7.0",
 		"twig/twig": "^3.16",
