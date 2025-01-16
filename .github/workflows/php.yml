@@ -2,8 +2,9 @@ name: IDMarinas Template Bundle Test Suite
 
 on:
   pull_request:
+    branches: [ master, main ]
     types: [ opened, synchronize, reopened ]
-    tags-ignore: [ dependencies, documentation ]
+    tags-ignore: [ dependencies, documentation, meta, 'docker configuration', 'deployer configuration' ]
   push:
     branches: [ master, main ]
     paths-ignore:
