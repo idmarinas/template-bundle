@@ -18,7 +18,7 @@
 		<social type="blog" href="https://bit.ly/m/idmarinas">See my other projects</social>
 		<social type="twitter" href="https://x.com/idmarinas" />
 
-		<link href="https://www.github.com/%package-name%/issues">Issues</link>
+		<link href="https://www.github.com/%package_name%/issues">Issues</link>
 
 		<copyright>2025-present IDMarinas</copyright>
 	</footer>
