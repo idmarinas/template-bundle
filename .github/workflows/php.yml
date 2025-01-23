@@ -25,11 +25,10 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ matrix.operating-system }}
+    runs-on: ubuntu-latest
     name: PHP ${{ matrix.php }} and Symfony ${{ matrix.symfony }}
     strategy:
       matrix:
-        operating-system: [ ubuntu-latest ]
         php: [ '8.2', '8.3', '8.4' ]
         symfony: [ '6.4.*', '7.0.*', '7.1.*', '7.2.*' ]
 
