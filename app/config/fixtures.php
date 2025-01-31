@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2024 (C) IDMarinas - All Rights Reserved
+ * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
  * Last modified by "IDMarinas" on 20/12/2024, 17:49
  *

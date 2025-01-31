@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2024 (C) IDMarinas - All Rights Reserved
+ * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
  * Last modified by "IDMarinas" on 20/12/2024, 17:49
  *
@@ -20,7 +20,7 @@
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return static function (ContainerConfigurator $container) {
-	// @formatter:off
+    // @formatter:off
 	$container
 		->services()
 			->load('Factory\\', dirname(__DIR__) . '/factories')
