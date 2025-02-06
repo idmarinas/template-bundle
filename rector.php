@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 02/01/2025, 22:23
+ * Last modified by "IDMarinas" on 06/02/2025, 19:36
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -47,5 +47,6 @@ return RectorConfig::configure()
 		SymfonySetList::SYMFONY_64,
 		SymfonySetList::SYMFONY_CONSTRUCTOR_INJECTION,
 	])
-	->withRules([AddVoidReturnTypeWhereNoReturnRector::class])
+	->withRules()
+	->withSkip()
 ;
