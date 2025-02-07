@@ -1,6 +1,10 @@
 <!--suppress HtmlDeprecatedAttribute -->
 <div align="center">
 
+[//]: # (![GitHub release]&#40;https://img.shields.io/github/release/REPOSITORY_NAME_CHANGE_ME.svg?style=for-the-badge&#41;)
+
+[//]: # (![GitHub Release Date]&#40;https://img.shields.io/github/release-date/REPOSITORY_NAME_CHANGE_ME.svg?style=for-the-badge&#41;)
+
 # IDMarinas Template Bundle
 
 </div>
@@ -20,10 +24,6 @@
 [//]: # ([![Technical Debt]&#40;https://img.shields.io/sonar/tech_debt/SONAR_PROJECT_NAME_CHANGE_ME?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white&#41;]&#40;https://sonarcloud.io/dashboard?id=SONAR_PROJECT_NAME_CHANGE_ME&#41;)
 
 <br />
-
-[//]: # (![GitHub release]&#40;https://img.shields.io/github/release/REPOSITORY_NAME_CHANGE_ME.svg?style=for-the-badge&#41;)
-
-[//]: # (![GitHub Release Date]&#40;https://img.shields.io/github/release-date/REPOSITORY_NAME_CHANGE_ME.svg?style=for-the-badge&#41;)
 
 [//]: # (![Github commits &#40;since latest release&#41;]&#40;https://img.shields.io/github/commits-since/REPOSITORY_NAME_CHANGE_ME/latest.svg?style=for-the-badge&#41;)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/idmarinas/template-bundle.svg?style=for-the-badge)
