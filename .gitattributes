@@ -1,6 +1,12 @@
 # Auto detect text files and perform LF normalization
 * text=lf
 
+.gitattributes merge=ours
+composer.json merge=ours
+package.json merge=ours
+README.md merge=ours
+.idea/ merge=ours
+
 /.docker/ export-ignore
 /.github export-ignore
 /.idea/ export-ignore
@@ -19,5 +25,5 @@
 /.gitignore export-ignore
 /compose.yaml export-ignore
 /phpunit.xml.dist export-ignore
-/rector.php
-/sonar-project.properties
+/rector.php export-ignore
+/sonar-project.properties export-ignore
