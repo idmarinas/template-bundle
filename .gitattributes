@@ -3,9 +3,13 @@
 
 .gitattributes merge=ours
 composer.json merge=ours
+composer.lock merge=ours
+symfony.lock merge=ours
 package.json merge=ours
+package-lock.json merge=ours
 README.md merge=ours
 .idea/ merge=ours
+docs/ merge=ours
 
 /.docker/ export-ignore
 /.github export-ignore
