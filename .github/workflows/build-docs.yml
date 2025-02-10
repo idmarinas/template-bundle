@@ -1,9 +1,9 @@
 name: Build documentation
 
 on:
-  push:
-    paths:
-      - 'Writerside/**'
+  # push:
+  #   paths:
+  #     - 'Writerside/**'
   workflow_dispatch:
 
 permissions:
