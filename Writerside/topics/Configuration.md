@@ -1,3 +1,3 @@
 # Configuration
 
-Start typing here...
+> %project% **does not need** a specific configuration
