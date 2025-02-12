@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!---
   - Copyright 2025 (C) IDMarinas - All Rights Reserved
   -
-  - Last modified by "IDMarinas" on 10/02/2025, 19:42
+  - Last modified by "IDMarinas" on 12/02/2025, 19:21
   -
   - @project IDMarinas Template Bundle
   - @see https://github.com/idmarinas/idm-template-bundle
   -
   - @file Content.topic
-  - @date 10/02/2025
-  - @time 20:38
+  - @date 12/02/2025
+  - @time 19:21
   -
   - @author Iván Diaz Marinas (IDMarinas)
   - @license BSD 3-Clause License
@@ -22,7 +23,8 @@
 <topic
 	id="Content"
 	title="Content"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
 >
 
 	<!--    A section combines multiple topics dedicated to a specific subject.
