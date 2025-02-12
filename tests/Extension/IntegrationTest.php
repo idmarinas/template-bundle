@@ -1,8 +1,8 @@
 <?php
 /**
- * Copyright 2021-2024 (C) IDMarinas - All Rights Reserved
+ * Copyright 2021-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 16/12/2024, 19:06
+ * Last modified by "IDMarinas" on 12/02/2025, 13:16
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -14,7 +14,7 @@
  * @author  Iván Diaz Marinas (IDMarinas)
  * @license BSD 3-Clause License
  *
- * @since   0.1.0
+ * @since   1.0.0
  */
 
 namespace Idm\Bundle\Template\Tests\Extension;
