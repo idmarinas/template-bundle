@@ -47,6 +47,10 @@ jobs:
           SYMFONY_REQUIRE: ${{ matrix.symfony }}
         uses: ramsey/composer-install@v3
 
+      # # Uncomment if need create a SQLite Database
+      # - name: Create Database SQLite
+      #   run: 'php bin/console doctrine:schema:create --env=test && php bin/console doctrine:fixtures:load --env=test -n'
+
       - name: Run test suite on PHP ${{ matrix.php }} and Symfony ${{ matrix.symfony }}
         run: ./vendor/bin/phpunit --exclude ignore
 
