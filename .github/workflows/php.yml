@@ -8,6 +8,7 @@ on:
     paths-ignore:
       - '.deployer/**'
       - '.docker/**'
+      - '.idea/**'
       - 'migrations/**'
       - '**/docs/**'
       - '**/Writerside/**'
