@@ -1,23 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!---
-  - Copyright 2025 (C) IDMarinas - All Rights Reserved
-  -
-  - Last modified by "IDMarinas" on 12/02/2025, 19:21
-  -
-  - @project IDMarinas Template Bundle
-  - @see https://github.com/idmarinas/idm-template-bundle
-  -
-  - @file Content.topic
-  - @date 12/02/2025
-  - @time 19:21
-  -
-  - @author Iván Diaz Marinas (IDMarinas)
-  - @license BSD 3-Clause License
-  -
-  - @since 1.0.0
-  -->
-
 <!DOCTYPE topic
 	SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
 <topic
@@ -38,9 +20,9 @@
 							For other groups, try to keep the number between 2 and 6, but you can add more if necessary.-->
 
 	<section-starting-page>
-		<title>Section starting page title</title>
+		<title>Included in %project%</title>
 		<description>
-			Add an introductory paragraph: explain what this section is about in 2-3 short sentences.
+			A short summary of what %project% includes and how it can be used in your project.
 		</description>
 
 		<!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
