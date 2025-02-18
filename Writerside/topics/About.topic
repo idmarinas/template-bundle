@@ -14,5 +14,15 @@
 		These other third-party libraries/bundles have been used to create %project%.
 	</note>
 
-	<p>Start typing here...</p>
+	<deflist>
+		<def id="symfony-components" title="Symfony Components">
+			This project relies on these components for most of its features.
+		</def>
+	</deflist>
+
+	<seealso>
+		<category ref="external">
+			<a href="https://symfony.com/components">Symfony Components</a>
+		</category>
+	</seealso>
 </topic>
