@@ -9,3 +9,9 @@ services:
       test: php -v || exit 1
     volumes:
       - ./:/var/www/html
+      ## SSH
+      - ssh_key:/root/.ssh:ro
+
+volumes:
+  ssh_key:
+    external: true
