@@ -1,8 +1,8 @@
 <?php
 /**
- * Copyright 2024 (C) IDMarinas - All Rights Reserved
+ * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 30/12/2024, 17:53
+ * Last modified by "IDMarinas" on 07/03/2025, 18:42
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -19,15 +19,16 @@
 
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
-return static function (ContainerConfigurator $container) {
-	$container->extension('framework', [
-		'secret'                => 'test',
-		'test'                  => true,
-		'http_method_override'  => false,
-		'handle_all_throwables' => true,
-		'php_errors'            => [
-			'log' => true,
-		],
-		'form'                  => false,
-	]);
+use Symfony\Config\FrameworkConfig;
+
+return static function (FrameworkConfig $config) {
+	$config
+		->secret('test')
+		->test(true)
+		->httpMethodOverride(false)
+		->handleAllThrowables(true)
+	;
+	$config->form()->enabled(false);
+	$config->propertyAccess()->enabled(true);
+	$config->phpErrors()->log(true);
 };
