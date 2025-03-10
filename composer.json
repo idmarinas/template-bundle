@@ -21,7 +21,7 @@
 	"minimum-stability": "stable",
 	"prefer-stable": true,
 	"require": {
-		"php": "^8.2",
+		"php": "^8.3",
 		"symfony/dependency-injection": "^6.4 | ^7.0",
 		"symfony/framework-bundle": "^6.4 | ^7.0"
 	},
