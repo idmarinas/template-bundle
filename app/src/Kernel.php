@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 13/03/2025, 22:16
+ * Last modified by "IDMarinas" on 13/03/2025, 22:23
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -20,6 +20,7 @@
 namespace App;
 
 use Exception;
+use Symfony\Bundle\FrameworkBundle\Controller\TemplateController;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -86,14 +87,14 @@ final class Kernel extends BaseKernel
 			$routes->import($route);
 		}
 
-//		$routes
-//			->add('app_home', '/')
-//			->methods(['GET'])
-//			->controller(TemplateController::class)
+		$routes
+			->add('app_home', '/')
+			->methods(['GET'])
+			->controller(TemplateController::class)
 //			->defaults([
 //				'template' => 'path/to/template.html.twig',
 //			])
-//		;
+		;
 	}
 
 	public function registerBundles (): iterable
