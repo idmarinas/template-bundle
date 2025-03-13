@@ -3,7 +3,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 04/01/2025, 24:45
+ * Last modified by "IDMarinas" on 13/03/2025, 22:10
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -22,18 +22,10 @@ namespace Idm\Bundle\Template\Tests;
 
 use App\Kernel;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
-use Symfony\Component\HttpKernel\KernelInterface;
 
 final class BundleInitializationTest extends KernelTestCase
 {
-	protected static function createKernel (array $options = []): KernelInterface
-	{
-		/** @var Kernel $kernel */
-		$kernel = parent::createKernel($options);
-		$kernel->handleOptions($options);
-
-		return $kernel;
-	}
+	use KernelTestCaseTrait;
 
 	public function testInitBundle (): void
 	{
@@ -47,6 +39,6 @@ final class BundleInitializationTest extends KernelTestCase
 			},
 		]);
 
-		$this->assertTrue(true);
+		$this->assertTrue($kernel->getContainer()->has('kernel'));
 	}
 }
