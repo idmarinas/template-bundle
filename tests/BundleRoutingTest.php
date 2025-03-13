@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 13/03/2025, 22:09
+ * Last modified by "IDMarinas" on 13/03/2025, 22:13
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -24,7 +24,7 @@ use Symfony\Component\Routing\RouterInterface;
 
 class BundleRoutingTest extends KernelTestCase
 {
-	use KernelTestCaseTrait;
+	use CreateKernelCaseTrait;
 
 	public function testAddRoutingFile (): void
 	{

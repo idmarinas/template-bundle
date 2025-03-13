@@ -2,12 +2,12 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 13/03/2025, 22:09
+ * Last modified by "IDMarinas" on 13/03/2025, 22:13
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
  *
- * @file    KernelTestCaseTrait.php
+ * @file    CreateKernelCaseTrait.php
  * @date    13/03/2025
  * @time    19:40
  *
@@ -21,7 +21,7 @@ namespace Idm\Bundle\Template\Tests;
 
 use Symfony\Component\HttpKernel\KernelInterface;
 
-trait KernelTestCaseTrait
+trait CreateKernelCaseTrait
 {
 	protected static function createKernel (array $options = []): KernelInterface
 	{
