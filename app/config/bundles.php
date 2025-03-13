@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 09/01/2025, 21:46
+ * Last modified by "IDMarinas" on 13/03/2025, 22:19
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -28,11 +28,13 @@ use Zenstruck\Foundry\ZenstruckFoundryBundle;
 return [
 	FrameworkBundle::class        => ['all' => true],
 	DoctrineBundle::class         => ['all' => true],
-	IdmTemplateBundle::class      => ['all' => true],
 
 	// Dev-Test Bundles
 	MakerBundle::class            => ['all' => true],
 	DoctrineFixturesBundle::class => ['all' => true],
 	DAMADoctrineTestBundle::class => ['all' => true],
 	ZenstruckFoundryBundle::class => ['all' => true],
+
+	// This Bundle
+	IdmTemplateBundle::class      => ['all' => true],
 ];
