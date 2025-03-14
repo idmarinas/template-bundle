@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 13/03/2025, 22:13
+ * Last modified by "IDMarinas" on 14/03/2025, 23:20
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -19,12 +19,14 @@
 
 namespace Idm\Bundle\Template\Tests;
 
+use App\Kernel;
 use Symfony\Component\HttpKernel\KernelInterface;
 
 trait CreateKernelCaseTrait
 {
 	protected static function createKernel (array $options = []): KernelInterface
 	{
+		/** @var Kernel $kernel */
 		$kernel = parent::createKernel($options);
 		$kernel->handleOptions($options);
 
