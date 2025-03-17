@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 22/01/2025, 13:26
+ * Last modified by "IDMarinas" on 16/03/2025, 19:56
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -61,10 +61,10 @@ return static function (ContainerConfigurator $container) {
 					'dir'       => dirname(__DIR__, 2) . '/src/Entity',
 					'prefix'    => 'App\Entity',
 				],
-				//'resolve_target_entities' => [
-				//	AbstractUser::class => User::class,
-				//],
 			],
+			//'resolve_target_entities' => [
+			//	AbstractUser::class => User::class,
+			//],
 		],
 	]);
 };
