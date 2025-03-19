@@ -1,6 +1,6 @@
 {
 	"name": "idmarinas/template-bundle",
-	"description": "Template for create a custom Symfony ^6.4 and ^7.0 Bundle",
+	"description": "Template for create a custom Symfony ^6.4 and ^7.1 Bundle",
 	"type": "template",
 	"license": "BSD-3-Clause",
 	"keywords": [
