@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 23/03/2025, 21:04
+ * Last modified by "IDMarinas" on 23/03/2025, 21:19
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -199,6 +199,7 @@ final class Kernel extends BaseKernel
 			'doctrine'                 => $this->getTestPackagesConfigDir() . '/doctrine.php',
 			'security'                 => $this->getTestPackagesConfigDir() . '/security.php',
 			'stof_doctrine_extensions' => $this->getTestPackagesConfigDir() . '/stof_doctrine_extensions.php',
+			'easy_admin'               => $this->getTestPackagesConfigDir() . '/easy_admin.php',
 			// Load Fixtures and Factories of Bundle
 			$this->getTestConfigDir() . '/factories.php',
 			$this->getTestConfigDir() . '/fixtures.php',
