@@ -13,7 +13,7 @@ your own text.}
 version number and International Date Format [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) for the
 date.)}
 
-## Release highlights
+### Release highlights
 
 {(Use this section to provide an overview of the most important changes in this release. This section should be a
 bulleted list.)}
@@ -22,7 +22,7 @@ bulleted list.)}
 * {(Feature Name)}: {(Summary)}
 * {(Feature Name)}: {(Summary)}
 
-## Added
+### Added
 
 {(Use this section to list any new features that have been added since the last release. If you build your changelog
 from Git commits, the feature description and commit number will be added automatically.)}
@@ -41,7 +41,7 @@ contributor handle.)}
 * {(Feature
   description)} {([Commit number](https://www.github.com))} {([Contributor handle](https://www.github.com/username))}
 
-## Changed
+### Changed
 
 {(Use this section to list changes in existing functionality for your application. If you build your changelog from Git
 commits, the feature description and commit number will be added automatically.)}
@@ -58,7 +58,7 @@ contributor handle.)}
 * {(Feature
   description)} {([Commit number](https://www.github.com))} {([Contributor handle](https://www.github.com/username))}
 
-## Deprecated
+### Deprecated
 
 {(Use this section to list features that were deprecated for the release. If you build your changelog from Git commits,
 the feature description and commit number will be added automatically.)}
@@ -75,7 +75,7 @@ contributor handle.)}
 * {(Feature
   description)} {([Commit number](https://www.github.com))} {([Contributor handle](https://www.github.com/username))}
 
-## Fixed
+### Fixed
 
 {(Use this section to highlight bugs that were fixed during the release. If you build your changelog from Git commits,
 the feature description and commit number will be added automatically.)}
@@ -92,7 +92,7 @@ contributor handle.)}
 * {(Feature
   description)} {([Commit number](https://www.github.com))} {([Contributor handle](https://www.github.com/username))}
 
-## Security
+### Security
 
 {(Use this section to list any resolved common vulnerabilities and exposures (CVEs) or other improvements to your
 software's security. If you build your changelog from Git commits, the feature description and commit number will be
@@ -110,7 +110,7 @@ contributor handle.)}
 * {(Feature
   description)} {([Commit number](https://www.github.com))} {([Contributor handle](https://www.github.com/username))}
 
-## Breaking changes
+### Breaking changes
 
 {(Use this section to list any breaking changes to your software. If you build your changelog from Git commits, the
 feature description and commit number will be added automatically.)}
