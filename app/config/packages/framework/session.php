@@ -1,8 +1,8 @@
 <?php
 /**
- * Copyright 2024 (C) IDMarinas - All Rights Reserved
+ * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 30/12/2024, 17:53
+ * Last modified by "IDMarinas" on 24/03/2025, 17:30
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -19,13 +19,14 @@
 
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
-return static function (ContainerConfigurator $container) {
-	$container->extension('framework', [
-		'session' => [
-			'handler_id'         => null,
-			'cookie_secure'      => true,
-			'cookie_samesite'    => 'lax',
-			'storage_factory_id' => 'session.storage.factory.mock_file',
-		],
-	]);
+use Symfony\Config\FrameworkConfig;
+
+return static function (FrameworkConfig $config) {
+    $config
+        ->session()
+        ->handlerId(null)
+        ->cookieSecure(true)
+        ->cookieSamesite('lax')
+        ->storageFactoryId('session.storage.factory.mock_file')
+    ;
 };
