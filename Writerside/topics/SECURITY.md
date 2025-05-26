@@ -15,7 +15,7 @@ below.
    issue
    is caused by Symfony component/s, please report the issue to them as explained in [symfony.com/security][security]
 
-2) If you find security issues you can report them in this repository using the tool provided by GitHub in
+2) If you find security issues, you can report them in this repository using the tool provided by GitHub in
    [Security > Advisories][advisories].
 
 [components]: https://symfony.com/components
