@@ -62,7 +62,7 @@
 
 #### Option 2
 
-> Visit https://github.com/idmarinas/template-bundle and click in button **Use this template**
+> Visit https://github.com/idmarinas/template-bundle and click the button **Use this template**
 
 ## Customize template
 
@@ -82,7 +82,7 @@
 [![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net)
 [![Symfony](https://img.shields.io/badge/symfony-black.svg?style=for-the-badge&logo=symfony&logoColor=white)](https://www.symfony.com)
 
-## 🛠️ Tools used for create this project
+## 🛠️ Tools used to create this project
 
 ![Dependabot](https://img.shields.io/badge/dependabot-025E8C?style=for-the-badge&logo=dependabot&logoColor=white)
 [![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/features/actions)
