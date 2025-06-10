@@ -18,10 +18,7 @@ on:
       - 'migrations/**'
       - '**/docs/**'
       - '**/Writerside/**'
-      - '**/README.md'
-      - '**/COMMANDS.md'
-      - '**/TIPS.md'
-      - '**/TODO.md'
+      - '**/*.md'
       - '**/LICENSE'
       - rector.php
       - .editorconfig
@@ -35,7 +32,7 @@ jobs:
     strategy:
       matrix:
         php: [ '8.3', '8.4' ]
-        symfony: [ '6.4.*', '7.1.*', '7.2.*' ]
+        symfony: [ '6.4.*', '7.1.*', '7.2.*', '7.3.*' ]
 
     steps:
       - uses: actions/checkout@v4
