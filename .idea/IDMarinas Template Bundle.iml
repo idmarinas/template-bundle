@@ -6,8 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/factories" isTestSource="true" packagePrefix="Factory\" />
       <sourceFolder url="file://$MODULE_DIR$/fixtures" isTestSource="true" packagePrefix="DataFixtures\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Idm\Bundle\Template\Tests\" />
-      <sourceFolder url="file://$MODULE_DIR$/app/src" isTestSource="true" packagePrefix="App\" />
-      <sourceFolder url="file://$MODULE_DIR$/var/cache/dev/Symfony/Config" isTestSource="false" packagePrefix="Symfony\Config\" />
+      <sourceFolder url="file://$MODULE_DIR$/tests/Fixtures/app/src" isTestSource="true" packagePrefix="App\" />
       <excludeFolder url="file://$MODULE_DIR$/var" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
       <excludeFolder url="file://$MODULE_DIR$/vendor" />
