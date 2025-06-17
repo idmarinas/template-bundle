@@ -1,15 +1,15 @@
 <?php
 /**
- * Copyright 2025 (C) IDMarinas - All Rights Reserved
+ * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 04/01/2025, 12:14
+ * Last modified by "idmarinas" on 18/02/2025, 16:13
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
  *
- * @file    maker.php
- * @date    04/01/2025
- * @time    12:14
+ * @file    router.php
+ * @date    30/12/2024
+ * @time    17:53
  *
  * @author  Iván Diaz Marinas (IDMarinas)
  * @license BSD 3-Clause License
@@ -19,11 +19,10 @@
 
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
-use Idm\Bundle\Template\IdmTemplateBundle;
-use ReflectionClass;
-
 return static function (ContainerConfigurator $container) {
-	$container->extension('maker', [
-		'root_namespace' => (new ReflectionClass(IdmTemplateBundle::class))->getNamespaceName(),
+	$container->extension('framework', [
+		'router' => [
+			'utf8' => true,
+		],
 	]);
 };

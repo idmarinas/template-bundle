@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 24/03/2025, 17:31
+ * Last modified by "idmarinas" on 24/03/2025, 23:41
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -22,9 +22,9 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 use Symfony\Config\FrameworkConfig;
 
 return static function (FrameworkConfig $config) {
-    $config
-        ->validation()
-        ->emailValidationMode('html5')
-        ->notCompromisedPassword()->enabled(false)
-    ;
+	$config
+		->validation()
+		->emailValidationMode('html5')
+		->notCompromisedPassword()->enabled(false)
+	;
 };

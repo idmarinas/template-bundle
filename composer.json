@@ -47,7 +47,7 @@
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"App\\": "app/src/",
+			"App\\": "tests/Fixtures/app/src/",
 			"Idm\\Bundle\\Template\\Tests\\": "tests/",
 			"DataFixtures\\": "fixtures/",
 			"Factory\\": "factories/"

@@ -2,12 +2,12 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 24/03/2025, 17:30
+ * Last modified by "idmarinas" on 18/02/2025, 16:13
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
  *
- * @file    session.php
+ * @file    security.php
  * @date    30/12/2024
  * @time    17:53
  *
@@ -19,14 +19,14 @@
 
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
-use Symfony\Config\FrameworkConfig;
-
-return static function (FrameworkConfig $config) {
-    $config
-        ->session()
-        ->handlerId(null)
-        ->cookieSecure(true)
-        ->cookieSamesite('lax')
-        ->storageFactoryId('session.storage.factory.mock_file')
-    ;
+return static function (ContainerConfigurator $container) {
+	$container->extension('security', [
+		'firewalls'      => [
+			'main' => [],
+		],
+		'role_hierarchy' => [
+			'ROLE_ADMIN'       => 'ROLE_USER',
+			'ROLE_SUPER_ADMIN' => ['ROLE_ADMIN', 'ROLE_ALLOWED_TO_SWITCH'],
+		],
+	]);
 };

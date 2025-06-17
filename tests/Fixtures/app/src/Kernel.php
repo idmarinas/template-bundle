@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 24/03/2025, 16:41
+ * Last modified by "idmarinas" on 17/06/2025, 17:10
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -231,7 +231,7 @@ final class Kernel extends BaseKernel
 
 	private function getTestConfigDir (): string
 	{
-		return $this->getProjectDir() . '/app/config';
+		return $this->getProjectDir() . '/tests/Fixtures/app/config';
 	}
 
 	private function getTestPackagesConfigDir (): string
