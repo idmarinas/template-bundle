@@ -10,7 +10,7 @@ services:
     volumes:
       - ./:/var/www/html
       ## SSH
-      - ssh_key:/root/.ssh:ro
+      - ssh_key:/root/.ssh
 
 volumes:
   ssh_key:
