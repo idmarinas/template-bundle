@@ -2,7 +2,7 @@
 /**
  * Copyright 2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 14/03/2025, 23:08
+ * Last modified by "IDMarinas" on 29/10/2025, 16:47
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -20,11 +20,10 @@
 declare(strict_types=1);
 
 use Rector\Config\RectorConfig;
-use Rector\Symfony\Set\SymfonySetList;
 
 return RectorConfig::configure()
 	->withPaths([
-		__DIR__ . '/app/src',
+		__DIR__ . '/config',
 		__DIR__ . '/factories',
 		__DIR__ . '/fixtures',
 		__DIR__ . '/src',
@@ -32,19 +31,18 @@ return RectorConfig::configure()
 	])
 	->withPhpSets(php83: true)
 	->withPreparedSets(
-		deadCode           : true,
-		codeQuality        : true,
-		codingStyle        : true,
+		phpunitCodeQuality : true,
 		doctrineCodeQuality: true,
 		symfonyCodeQuality : true,
-		symfonyConfigs     : true,
-		twig               : true
+		symfonyConfigs     : true
 	)
-	->withImportNames(removeUnusedImports: true)
 	->withTypeCoverageLevel(0)
-	->withSets([
-		SymfonySetList::SYMFONY_64,
+	->withDeadCodeLevel(0)
+	->withCodeQualityLevel(0)
+	->withImportNames(importDocBlockNames: false, removeUnusedImports: true)
+	->withComposerBased(twig: true, doctrine: true, symfony: true)
+	->withSymfonyContainerXml(__DIR__ . '/var/cache/dev/App_KernelDevDebugContainer.xml')
+	->withSkip([
+		__DIR__ . '/tests/Fixtures/app/config/bundles.php',
 	])
-	->withRules([])
-	->withSkip([])
 ;
