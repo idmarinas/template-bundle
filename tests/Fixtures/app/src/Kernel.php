@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "idmarinas" on 17/06/2025, 17:10
+ * Last modified by "IDMarinas" on 06/11/2025, 16:41
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -24,6 +24,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\TemplateController;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;
@@ -192,25 +193,22 @@ final class Kernel extends BaseKernel
 		ContainerBuilder      $builder
 	): void {
 		// Load config for Test App
-		$loader->load($this->getTestPackagesConfigDir() . '/framework.php');
+		$extensions = $builder->getExtensions();
+		$fileName = fn(string $name): string => $this->getTestPackagesConfigDir() . '/' . $name . '.php';
+		$file = fn(string $name): ?string => file_exists($fileName($name)) ? $fileName($name) : null;
+		array_walk($extensions, static fn(ExtensionInterface &$ext, string $name) => $ext = $file($name));
 
 		$config = [
-			'maker'                    => $this->getTestPackagesConfigDir() . '/maker.php',
-			'doctrine'                 => $this->getTestPackagesConfigDir() . '/doctrine.php',
-			'security'                 => $this->getTestPackagesConfigDir() . '/security.php',
-			'stof_doctrine_extensions' => $this->getTestPackagesConfigDir() . '/stof_doctrine_extensions.php',
-			'easy_admin'               => $this->getTestPackagesConfigDir() . '/easy_admin.php',
-			'twig_component'           => $this->getTestPackagesConfigDir() . '/twig_component.php',
+			// Load service of Bundle
+			$this->getTestConfigDir() . '/services.php',
 			// Load Fixtures and Factories of Bundle
 			$this->getTestConfigDir() . '/factories.php',
 			$this->getTestConfigDir() . '/fixtures.php',
 		];
 
-		foreach ($config as $extension => $file) {
-			if (is_numeric($extension) || $builder->hasExtension($extension)) {
-				$loader->load($file);
-			}
-		}
+		$full = array_filter($extensions + $config);
+		$load = fn(string|int $ext): bool => is_numeric($ext) || $builder->hasExtension($ext);
+		array_walk($full, static fn(string $file, int|string $ext) => $load($ext) ? $loader->load($file) : null);
 
 		// Load service of Bundle
 		$loader->load($this->getTestConfigDir() . '/services.php');
