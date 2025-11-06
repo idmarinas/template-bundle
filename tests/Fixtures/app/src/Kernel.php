@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 06/11/2025, 16:41
+ * Last modified by "IDMarinas" on 06/11/2025, 17:29
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -80,12 +80,7 @@ final class Kernel extends BaseKernel
 			$this->getConfigDir() . '/routes.php',
 			$this->getTestConfigDir() . '/routes.php',
 		], $this->extraRoutes));
-
-		foreach ($extraRoutes as $route) {
-			if (file_exists($route)) {
-				$routes->import($route);
-			}
-		}
+		array_walk($extraRoutes, static fn(string $route) => file_exists($route) ? $routes->import($route) : null);
 
 		//$routes->import('security.route_loader.logout', 'service')->methods(['GET']);
 
