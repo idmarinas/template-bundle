@@ -1,0 +1,8 @@
+---
+branch: 1.x
+title: 1.x Releases
+date: dd-mm-yyyy
+description: Browse all minor versions in the 1.x release line. Each release includes the publication date, a summary of changes, and the responsible author. Select any version to view the complete changelog.
+---
+
+
