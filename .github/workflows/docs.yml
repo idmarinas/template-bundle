@@ -1,5 +1,5 @@
 # https://github.com/actions/deploy-pages#usage
-name: Deploy Docs site to Pages
+name: Deploy Docs to GitHub Pages
 
 on:
   release:
@@ -49,6 +49,7 @@ jobs:
         with:
           node-version: "20"
       - name: Setup Pages
+        id: setup-pages
         uses: actions/configure-pages@v5
         with:
           # Automatically inject router.base in your Nuxt configuration file and set
@@ -59,7 +60,7 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Static HTML export with Nuxt
-        run: ${{ steps.detect-package-manager.outputs.manager }} run build
+        run: NUXT_APP_BASE_URL=/${{ steps.setup-pages.outputs.base_path }}/ ${{ steps.detect-package-manager.outputs.manager }} run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
