@@ -8,12 +8,11 @@ on:
 permissions:
   contents: read
 
-defaults:
-  run:
-    working-directory: ./docs
-
 jobs:
   build:
+    defaults:
+      run:
+        working-directory: ./docs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
