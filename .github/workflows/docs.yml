@@ -25,10 +25,9 @@ jobs:
         shell: bash
         run: echo "name=${GITHUB_REPOSITORY##*/}" >> $GITHUB_OUTPUT
       # Pick your own package manager and build script
+      - run: echo ${{ steps.repo.outputs.name }}
       - run: npm install
-      - run: npx nuxt build --preset github_pages
-        env:
-          NUXT_APP_BASE_URL: "/${{ steps.repo.outputs.name }}/"
+      - run: NUXT_APP_BASE_URL=/${{ steps.repo.outputs.name }}/ npx nuxt build --preset github_pages
       - name: Upload artifact
         id: deployment
         uses: actions/upload-pages-artifact@v3
