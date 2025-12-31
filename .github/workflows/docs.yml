@@ -27,7 +27,7 @@ jobs:
         id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .output/public
+          path: ./docs/.output/public
   # Deployment job
   deploy:
     # Add a dependency to the build job
