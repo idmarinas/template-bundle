@@ -4,8 +4,5 @@ export default defineNuxtConfig({
 		package_name: 'idmarinas/template-bundle',
 		description: 'Short description for your Symfony Bundle',
 		versions: [/* new versions here. "major.minor" avoid patch versions */ '1.0']
-	},
-	app: {
-		baseURL: '/template-bundle/'
 	}
 })
