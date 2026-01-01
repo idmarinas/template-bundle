@@ -5,7 +5,6 @@ export default defineNuxtConfig({
 		description: 'Short description for your Symfony Bundle',
 		versions: [/* new versions here. "major.minor" avoid patch versions */ '1.0']
 	},
-	ssr: false,
 	app: {
 		baseURL: '/template-bundle/'
 	}
