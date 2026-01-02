@@ -8,19 +8,15 @@ export default defineNuxtConfig({
 			'1.0'
 		]
 	},
-	app: {
-		baseURL: '/'
-	},
+	// app: {
+	// 	baseURL: '/'
+	// },
 	$production: {
-		app: {
-			baseURL: '/template-bundle/'
-		},
+		// app: {
+		// 	baseURL: '/template-bundle/'
+		// },
 		llms: {
-			domain: (() => {
-				// const config = useRuntimeConfig()
-				// const docs = config.docsBundle
-				return `https://idmarinas.github.io/template-bundle`
-			})()
+			domain: 'https://idmarinas.github.io/template-bundle'
 		}
 	},
 })
