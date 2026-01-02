@@ -1,4 +1,5 @@
 {
+	"description": "Short description for your Symfony Bundle",
 	"scripts": {
 		"dev": "nuxt dev",
 		"build": "nuxt build"
