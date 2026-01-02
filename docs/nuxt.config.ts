@@ -8,7 +8,9 @@ export default defineNuxtConfig({
 			'1.0'
 		]
 	},
-	app: {
-		baseURL: 'production' === process.env.NODE_ENV ? '/template-bundle/' : '/'
+	$production: {
+		app: {
+			baseURL: '/template-bundle/'
+		}
 	}
 })
