@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 04/01/2026, 18:46
+ * Last modified by "IDMarinas" on 04/01/2026, 21:12
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -21,14 +21,83 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
 use Symfony\Config\FrameworkConfig;
 
-return static function (FrameworkConfig $config) {
-	$config
-		->secret('test')
-		->test(true)
-		->httpMethodOverride(false)
-		->handleAllThrowables(true)
-	;
-	$config->form()->enabled(false);
-	$config->propertyAccess()->enabled(true);
-	$config->phpErrors()->log(true);
+return static function (FrameworkConfig $config, ContainerConfigurator $container) {
+	$container->extension('framework', [
+		'secret'                => 'test',
+		'http_method_override'  => false,
+		'test'                  => true,
+		'default_locale'        => 'en',
+		'enabled_locales'       => [
+			0 => 'en',
+		],
+		'handle_all_throwables' => true,
+		'csrf_protection'       => [
+			'enabled' => false,
+		],
+		'form'                  => [
+			'enabled'         => false,
+			'csrf_protection' => [
+				'enabled' => true,
+			],
+		],
+		'http_cache'            => [
+			'enabled' => false,
+			'debug'   => true,
+		],
+		'router'                => [
+			'enabled' => true,
+			'utf8'    => true,
+		],
+		'session'               => [
+			'enabled'         => false,
+			'handler_id'      => null,
+			'cookie_secure'   => true,
+			'cookie_samesite' => 'lax',
+		],
+		'assets'                => [
+			'enabled' => false,
+		],
+		'validation'            => [
+			'enabled'                  => false,
+			'email_validation_mode'    => 'html5',
+			'not_compromised_password' => [
+				'enabled' => false,
+			],
+		],
+		'property_access'       => [
+			'enabled' => false,
+		],
+		'php_errors'            => [
+			'log' => true,
+		],
+		'messenger'             => [
+			'enabled'    => false,
+			'routing'    => [
+				'Symfony\Component\Mailer\Messenger\SendEmailMessage' => [
+					'senders' => [
+						0 => 'sync',
+					],
+				],
+			],
+			'transports' => [
+				'sync' => 'in-memory://',
+			],
+		],
+		'mailer'                => [
+			'enabled'  => false,
+			'dsn'      => false,
+			'envelope' => [
+				'sender' => 'idm_bundle@test.bundle',
+			],
+			'headers'  => [
+				'From' => 'IDMarinas Seo Bundle <idm_bundle@test.bundle>',
+			],
+		],
+		'uid'                   => [
+			'enabled'                 => false,
+			'default_uuid_version'    => 7,
+			'time_based_uuid_version' => 7,
+		],
+
+	]);
 };
