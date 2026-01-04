@@ -42,9 +42,8 @@
 	        restrictWarnings="true"
 	>
 		<include>
+			<directory>config</directory>
 			<directory>src</directory>
-			<directory>apps/admin/src</directory>
-			<directory>apps/web/src</directory>
 		</include>
 
 		<deprecationTrigger>
