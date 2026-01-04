@@ -1,8 +1,8 @@
 <?php
 /**
- * Copyright 2021-2025 (C) IDMarinas - All Rights Reserved
+ * Copyright 2021-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 06/11/2025, 17:31
+ * Last modified by "IDMarinas" on 04/01/2026, 19:21
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -20,14 +20,15 @@
 namespace Idm\Bundle\Template\Tests\Twig\Extension;
 
 use App\Kernel;
+use PHPUnit\Framework\Attributes\Group;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Twig\Test\IntegrationTestCase;
 
 /**
  * Test Twig Extensions.
  *
- * @group ignore
  */
+#[Group("ignore")]
 final class IntegrationTest extends IntegrationTestCase
 {
 	public static function getFixturesDirectory (): string
