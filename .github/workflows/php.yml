@@ -30,7 +30,7 @@ jobs:
     strategy:
       matrix:
         php: [ '8.3', '8.4', '8.5' ]
-        symfony: [ '6.4.*', '7.3.*', '7.4.*', '8.0.*' ]
+        symfony: [ '6.4.*', '7.1.*', '7.2.*', '7.3.*', '7.4.*', '8.0.*' ]
 
         exclude:
           - php: '8.3'
@@ -50,6 +50,7 @@ jobs:
       - name: Download dependencies
         env:
           SYMFONY_REQUIRE: ${{ matrix.symfony }}
+          COMPOSER_NO_AUDIT: 1
         uses: ramsey/composer-install@v3
 
       # # Uncomment if need create a SQLite Database
