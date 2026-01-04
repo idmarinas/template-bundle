@@ -1,13 +1,13 @@
 <?php
 /**
- * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
+ * Copyright 2024-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 06/11/2025, 17:31
+ * Last modified by "IDMarinas" on 04/01/2026, 18:46
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
  *
- * @file    validation.php
+ * @file    mailer.php
  * @date    30/12/2024
  * @time    17:53
  *
@@ -23,8 +23,9 @@ use Symfony\Config\FrameworkConfig;
 
 return static function (FrameworkConfig $config) {
 	$config
-		->validation()
-		->emailValidationMode('html5')
-		->notCompromisedPassword()->enabled(false)
+		->mailer()
+		->dsn($_ENV['MAILER_DSN'] ?? 'null://null')
+		->envelope()->sender('idm_bundle@test.bundle')
 	;
+	$config->mailer()->header('From', 'IDMarinas Template Bundle <idm_bundle@test.bundle>');
 };

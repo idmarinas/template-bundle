@@ -1,13 +1,13 @@
 <?php
 /**
- * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
+ * Copyright 2024-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 06/11/2025, 17:31
+ * Last modified by "IDMarinas" on 04/01/2026, 18:46
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
  *
- * @file    router.php
+ * @file    security.php
  * @date    30/12/2024
  * @time    17:53
  *
@@ -20,9 +20,13 @@
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
 return static function (ContainerConfigurator $container) {
-	$container->extension('framework', [
-		'router' => [
-			'utf8' => true,
+	$container->extension('security', [
+		'firewalls'      => [
+			'main' => [],
+		],
+		'role_hierarchy' => [
+			'ROLE_ADMIN'       => 'ROLE_USER',
+			'ROLE_SUPER_ADMIN' => ['ROLE_ADMIN', 'ROLE_ALLOWED_TO_SWITCH'],
 		],
 	]);
 };

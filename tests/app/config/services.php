@@ -1,15 +1,15 @@
 <?php
 /**
- * Copyright 2025 (C) IDMarinas - All Rights Reserved
+ * Copyright 2024-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "idmarinas" on 23/03/2025, 21:22
+ * Last modified by "IDMarinas" on 04/01/2026, 18:46
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
  *
- * @file    easy_admin.php
- * @date    23/03/2025
- * @time    21:18
+ * @file    services.php
+ * @date    30/12/2024
+ * @time    17:53
  *
  * @author  Iván Diaz Marinas (IDMarinas)
  * @license BSD 3-Clause License
@@ -20,11 +20,9 @@
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
 return static function (ContainerConfigurator $container) {
-	$container->extension('framework', [
-		'forms'  => true,
-		'assets' => true,
-		'router' => [
-			'utf8' => true,
-		],
-	]);
+	// @formatter:off
+	$container
+		->services()
+	;
+	// @formatter:on
 };
