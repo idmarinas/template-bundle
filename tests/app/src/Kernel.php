@@ -1,8 +1,8 @@
 <?php
 /**
- * Copyright 2024-2025 (C) IDMarinas - All Rights Reserved
+ * Copyright 2024-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 06/11/2025, 17:29
+ * Last modified by "IDMarinas" on 04/01/2026, 18:38
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
