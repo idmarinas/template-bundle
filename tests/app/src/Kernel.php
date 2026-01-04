@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 04/01/2026, 18:56
+ * Last modified by "IDMarinas" on 04/01/2026, 20:37
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -20,7 +20,6 @@
 namespace App;
 
 use Exception;
-use Symfony\Bundle\FrameworkBundle\Controller\TemplateController;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -81,17 +80,6 @@ final class Kernel extends BaseKernel
 			$this->getTestConfigDir() . '/routes.php',
 		], $this->extraRoutes));
 		array_walk($extraRoutes, static fn(string $route) => file_exists($route) ? $routes->import($route) : null);
-
-		//$routes->import('security.route_loader.logout', 'service')->methods(['GET']);
-
-		$routes
-			->add('app_home', '/')
-			->methods(['GET'])
-			->controller(TemplateController::class)
-//			->defaults([
-//				'template' => 'path/to/template.html.twig',
-//			])
-		;
 	}
 
 	public function registerBundles (): iterable
@@ -204,9 +192,6 @@ final class Kernel extends BaseKernel
 		$full = array_filter($extensions + $config);
 		$load = fn(string|int $ext): bool => is_numeric($ext) || $builder->hasExtension($ext);
 		array_walk($full, static fn(string $file, int|string $ext) => $load($ext) ? $loader->load($file) : null);
-
-		// Load service of Bundle
-		$loader->load($this->getTestConfigDir() . '/services.php');
 
 		foreach ($this->extraConfig as $extension => $config) {
 			if (is_array($config)) {
