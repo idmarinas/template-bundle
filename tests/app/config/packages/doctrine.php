@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 04/01/2026, 18:46
+ * Last modified by "IDMarinas" on 04/01/2026, 20:00
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -43,18 +43,15 @@ return static function (ContainerConfigurator $container, ContainerBuilder $buil
 
 	$container->extension('doctrine', [
 		'dbal' => [
-			'driver'         => 'pdo_sqlite',
-			'url'            => $getDatabaseCache($builder->getParameter('kernel.project_dir'), $container->env()),
-			'use_savepoints' => true,
+			'driver' => 'pdo_sqlite',
+			'url'    => $getDatabaseCache($builder->getParameter('kernel.project_dir'), $container->env()),
 		],
 		'orm'  => [
-			'enable_lazy_ghost_objects'   => true,
-			'auto_generate_proxy_classes' => true,
-			'auto_mapping'                => false,
-			'controller_resolver'         => [
+			'auto_mapping'        => false,
+			'controller_resolver' => [
 				'auto_mapping' => false,
 			],
-			'mappings'                    => [
+			'mappings'            => [
 				'Tests' => [
 					'is_bundle' => false,
 					'mapping'   => true,
