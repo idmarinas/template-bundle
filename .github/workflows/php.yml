@@ -6,11 +6,11 @@ permissions:
 
 on:
   pull_request:
-    branches: [ master ]
+    branches: [ 1.x ]
     types: [ opened, synchronize, reopened ]
     tags-ignore: [ dependencies, documentation, meta, 'docker configuration', 'deployer configuration' ]
   push:
-    branches: [ master ]
+    branches: [ 1.x ]
     paths-ignore:
       - '.idea/**'
       - 'migrations/**'
