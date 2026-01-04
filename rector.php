@@ -1,8 +1,8 @@
 <?php
 /**
- * Copyright 2025 (C) IDMarinas - All Rights Reserved
+ * Copyright 2025-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 29/10/2025, 16:47
+ * Last modified by "IDMarinas" on 04/01/2026, 20:27
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -24,8 +24,6 @@ use Rector\Config\RectorConfig;
 return RectorConfig::configure()
 	->withPaths([
 		__DIR__ . '/config',
-		__DIR__ . '/factories',
-		__DIR__ . '/fixtures',
 		__DIR__ . '/src',
 		__DIR__ . '/tests',
 	])
@@ -43,6 +41,6 @@ return RectorConfig::configure()
 	->withComposerBased(twig: true, doctrine: true, symfony: true)
 	->withSymfonyContainerXml(__DIR__ . '/var/cache/dev/App_KernelDevDebugContainer.xml')
 	->withSkip([
-		__DIR__ . '/tests/Fixtures/app/config/bundles.php',
+		__DIR__ . '/tests/app/config/bundles.php',
 	])
 ;
