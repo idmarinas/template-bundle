@@ -14,6 +14,7 @@ seo:
 :text-bundle-name
 
 #description
+:vars{n="project.description"}
 
 #default
 :svg-logo
@@ -77,7 +78,7 @@ Shipped with many features
   to: https://www.github.com/idmarinas/template-bundle
   ---
   #title
-  Built your bundle with [IDMarinas Template Bundle]{.text-primary}
+  Built your bundle with [:vars{n="project"}]{.text-primary}
 
   #description
   Create your Symfony Bundle with this Template
