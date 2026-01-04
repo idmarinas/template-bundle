@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 04/01/2026, 21:12
+ * Last modified by "IDMarinas" on 04/01/2026, 21:15
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -19,9 +19,7 @@
 
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
-use Symfony\Config\FrameworkConfig;
-
-return static function (FrameworkConfig $config, ContainerConfigurator $container) {
+return static function (ContainerConfigurator $container) {
 	$container->extension('framework', [
 		'secret'                => 'test',
 		'http_method_override'  => false,
