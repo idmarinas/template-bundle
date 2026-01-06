@@ -50,7 +50,7 @@
 		"psr-4": {
 			"App\\": "tests/app/src/",
 			"Idm\\Bundle\\Template\\Tests\\": "tests/",
-			"DataFixtures\\": "tests/Fixture/",
+			"DataFixtures\\": "tests/DataFixtures/",
 			"Factory\\": "tests/Factory/"
 		}
 	},

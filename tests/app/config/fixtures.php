@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 04/01/2026, 18:47
+ * Last modified by "IDMarinas" on 06/01/2026, 14:32
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -24,7 +24,7 @@ return static function (ContainerConfigurator $container, ContainerBuilder $buil
 	// @formatter:off
 	$container
 		->services()
-			->load('DataFixtures\\', $builder->getParameter('kernel.project_dir') . '/tests/Fixture')
+			->load('DataFixtures\\', $builder->getParameter('kernel.project_dir') . '/tests/DataFixtures')
 			->public()
 			->autowire()
 			->autoconfigure()
