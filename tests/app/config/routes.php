@@ -2,7 +2,7 @@
 /**
  * Copyright 2025-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 04/01/2026, 20:45
+ * Last modified by "IDMarinas" on 06/01/2026, 19:33
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -29,7 +29,7 @@ return function (RoutingConfigurator $routes) {
 	$routes->add('app_home', '/')
 		->controller(TemplateController::class)
 		->methods(['GET'])
-		->defaults(['template' => '@IdmSeo/pages/home.html.twig'])
+		->defaults(['template' => 'pages/home.html.twig'])
 		->options([
 			'seo' => true
 		])
