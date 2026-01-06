@@ -5,8 +5,6 @@ navigation: false
 seo:
   ogImage:
     props:
-      title: Security Policy
-      description: Security policy for using and reporting vulnerability
       icon: i-tabler-shield-check
 ---
 
