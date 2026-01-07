@@ -68,7 +68,7 @@ Support Me
 
 ::u-page-section
 #title
-Shipped with many features
+A short summary of what **:text-bundle-name** includes and how it can be used in your project.
 
 #features
   :::u-page-feature
