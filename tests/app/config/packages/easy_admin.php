@@ -2,7 +2,7 @@
 /**
  * Copyright 2025-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 06/01/2026, 19:46
+ * Last modified by "IDMarinas" on 08/01/2026, 21:02
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -24,7 +24,8 @@ return static function (ContainerConfigurator $container) {
 		'form'   => true,
 		'assets' => true,
 		'router' => [
-			'utf8' => true,
+			'enabled' => true,
+			'utf8'    => true,
 		],
 	]);
 };
