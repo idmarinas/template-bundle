@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 04/01/2026, 21:15
+ * Last modified by "IDMarinas" on 08/01/2026, 21:04
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -25,9 +25,7 @@ return static function (ContainerConfigurator $container) {
 		'http_method_override'  => false,
 		'test'                  => true,
 		'default_locale'        => 'en',
-		'enabled_locales'       => [
-			0 => 'en',
-		],
+		'enabled_locales'       => ['en'],
 		'handle_all_throwables' => true,
 		'csrf_protection'       => [
 			'enabled' => false,
@@ -52,9 +50,6 @@ return static function (ContainerConfigurator $container) {
 			'cookie_secure'   => true,
 			'cookie_samesite' => 'lax',
 		],
-		'assets'                => [
-			'enabled' => false,
-		],
 		'validation'            => [
 			'enabled'                  => false,
 			'email_validation_mode'    => 'html5',
@@ -72,9 +67,7 @@ return static function (ContainerConfigurator $container) {
 			'enabled'    => false,
 			'routing'    => [
 				'Symfony\Component\Mailer\Messenger\SendEmailMessage' => [
-					'senders' => [
-						0 => 'sync',
-					],
+					'senders' => ['sync'],
 				],
 			],
 			'transports' => [
@@ -96,6 +89,5 @@ return static function (ContainerConfigurator $container) {
 			'default_uuid_version'    => 7,
 			'time_based_uuid_version' => 7,
 		],
-
 	]);
 };
