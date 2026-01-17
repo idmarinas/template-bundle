@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
 	extends: ['github:idmarinas/nuxt-layers/docs-bundle#master', 'docus'],
+	modules: ['nuxt-studio'],
 	docsBundle: {},
 	$production: {
 		llms: {
