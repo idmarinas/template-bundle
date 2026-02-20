@@ -1,5 +1,6 @@
 ###> idmarinas/idm-template-bundle ###
 **/*.dist
+/config/reference.php
 /docs/package-lock.json
 /build/
 /vendor/
