@@ -5,8 +5,6 @@ navigation: false
 seo:
   ogImage:
     props:
-      title: About
-      description: Third-party libraries/bundles that have helped create this bundle
       headline: Components Used
       icon: i-tabler-user
 ---
