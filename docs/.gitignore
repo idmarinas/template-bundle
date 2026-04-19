@@ -26,6 +26,8 @@ logs
 
 # npm pack
 *.tgz
+*.lock
+package-lock.json
 
 # Temp files
 .tmp
