@@ -9,7 +9,6 @@
 		"better-sqlite3": "^12.8.0",
 		"docus": "latest",
 		"nuxt": "^4.4.2",
-		"nuxt-seo-utils": "^7.0.19",
-		"nuxt-studio": "^1.5.1"
+		"nuxt-seo-utils": "^7.0.19"
 	}
 }
