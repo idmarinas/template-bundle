@@ -4,9 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" packagePrefix="Idm\Bundle\Template\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Idm\Bundle\Template\Tests\" />
-      <sourceFolder url="file://$MODULE_DIR$/tests/Factory" isTestSource="true" packagePrefix="Factory\" />
       <sourceFolder url="file://$MODULE_DIR$/tests/app/src" isTestSource="true" packagePrefix="App\" />
-      <sourceFolder url="file://$MODULE_DIR$/tests/DataFixtures" isTestSource="true" packagePrefix="DataFixtures\" />
       <excludeFolder url="file://$MODULE_DIR$/var" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
       <excludeFolder url="file://$MODULE_DIR$/vendor" />
