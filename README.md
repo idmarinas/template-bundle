@@ -5,7 +5,7 @@
 
 ![GitHub release](https://img.shields.io/github/release/idmarinas/REPOSITORY_NAME_CHANGE_ME.svg?style=for-the-badge)
 ![GitHub Release Date](https://img.shields.io/github/release-date/idmarinas/REPOSITORY_NAME_CHANGE_ME.svg?style=for-the-badge)
-[![Static Badge](https://img.shields.io/badge/Documentation-blue?style=for-the-badge&logo=readme&logoColor=white)](https://idmarinas.github.io/template-bundle/)
+[![Documentation](https://img.shields.io/badge/Documentation-blue?style=for-the-badge&logo=readme&logoColor=white)](https://idmarinas.github.io/template-bundle/)
 
 </div>
 
