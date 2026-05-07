@@ -1,9 +1,6 @@
 ---
-title: IDMarinas Template Bundle
+title: {{project_name}}
 description: Short description for your Symfony Bundle
-seo:
-  ogImage:
-    component: Bundle
 ---
 
 ::u-page-hero{orientation="horizontal"}
