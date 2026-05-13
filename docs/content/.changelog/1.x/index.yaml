@@ -1,5 +1,10 @@
 branch: 1.x
 title: 1.x Releases
-description: |
-  Browse all minor versions in the 1.x release line. Each release includes the publication date, a
-  summary of changes, and the responsible author. Select any version to view the complete changelog.
+description:
+  Browse all minor versions in the 1.x release line. Each release includes the publication date, a summary of changes, and the responsible author.
+  Select any version to view the complete changelog.
+security: true # Does the branch receive security updates?
+requirements: # Requirements need for versions in this branch
+  php: ['^8.3']
+  symfony: ['^6.4', '^7.1', '^8.0']
+  support: features # One of: features, bugs, none
