@@ -1,6 +1,11 @@
 ---
 title: {{project_name}}
 description: Short description for your Symfony Bundle
+# Aditional for Docs only
+# since: '1.0'
+# deprecated:
+#   since: '1.5'
+#   removed: '2.0'
 ---
 
 ::u-page-hero{orientation="horizontal"}
