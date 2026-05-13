@@ -2,19 +2,16 @@
 title: Security Policy
 description: Security policy for using and reporting vulnerability
 navigation: false
-seo:
-  ogImage:
-    props:
-      icon: i-tabler-shield-check
+ogImage:
+  props:
+    icon: i-tabler-shield-check
 ---
 
 ## Supported Versions
 
 Not all branches of this project are supported, to know which branches are supported and which are not, see the table below.
 
-| Branch | Supported          |
-|--------|--------------------|
-| 1.x    | :white_check_mark: |
+:list-branch-security
 
 ## Reporting a Vulnerability
 

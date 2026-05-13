@@ -12,4 +12,4 @@ ogImage:
 Third-party libraries and packages that have contributed to the creation of the **:vars{n=project}**.
 ::
 
-:library-list
+:list-library
