@@ -5,10 +5,10 @@
 		"build": "nuxt build"
 	},
 	"dependencies": {
-		"@takumi-rs/core": "^1.0.10",
-		"better-sqlite3": "^12.8.0",
+		"@takumi-rs/core": "^1.1.2",
+		"better-sqlite3": "^12.10.0",
 		"docus": "latest",
-		"nuxt": "^4.4.2",
+		"nuxt": "^4.4.5",
 		"nuxt-seo-utils": "^7.0.19"
 	}
 }
