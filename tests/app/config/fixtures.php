@@ -17,14 +17,17 @@
  * @since   1.0.0
  */
 
+use Idm\Bundle\Template\IdmTemplateBundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return static function (ContainerConfigurator $container, ContainerBuilder $builder) {
+	$namespace = (new ReflectionClass(IdmTemplateBundle::class))->getNamespaceName();
+
 	// @formatter:off
 	$container
 		->services()
-			->load('DataFixtures\\', $builder->getParameter('kernel.project_dir') . '/tests/DataFixtures')
+			->load($namespace.'\\Tests\\DataFixtures\\', $builder->getParameter('kernel.project_dir') . '/tests/DataFixtures')
 			->public()
 			->autowire()
 			->autoconfigure()
