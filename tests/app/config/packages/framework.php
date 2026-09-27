@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 08/01/2026, 21:04
+ * Last modified by "IDMarinas" on 27/09/2026, 23:40
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -19,7 +19,9 @@
 
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
-return static function (ContainerConfigurator $container) {
+use Symfony\Component\Mailer\Messenger\SendEmailMessage;
+
+return static function (ContainerConfigurator $container): void {
 	$container->extension('framework', [
 		'secret'                => 'test',
 		'http_method_override'  => false,
@@ -28,6 +30,9 @@ return static function (ContainerConfigurator $container) {
 		'enabled_locales'       => ['en'],
 		'handle_all_throwables' => true,
 		'csrf_protection'       => [
+			'enabled' => false,
+		],
+		'assets'                => [
 			'enabled' => false,
 		],
 		'form'                  => [
@@ -45,10 +50,11 @@ return static function (ContainerConfigurator $container) {
 			'utf8'    => true,
 		],
 		'session'               => [
-			'enabled'         => false,
-			'handler_id'      => null,
-			'cookie_secure'   => true,
-			'cookie_samesite' => 'lax',
+			'enabled'            => false,
+			'handler_id'         => null,
+			'cookie_secure'      => 'auto',
+			'cookie_samesite'    => 'lax',
+			'storage_factory_id' => 'session.storage.factory.mock_file',
 		],
 		'validation'            => [
 			'enabled'                  => false,
@@ -66,7 +72,7 @@ return static function (ContainerConfigurator $container) {
 		'messenger'             => [
 			'enabled'    => false,
 			'routing'    => [
-				'Symfony\Component\Mailer\Messenger\SendEmailMessage' => [
+				SendEmailMessage::class => [
 					'senders' => ['sync'],
 				],
 			],
@@ -76,12 +82,12 @@ return static function (ContainerConfigurator $container) {
 		],
 		'mailer'                => [
 			'enabled'  => false,
-			'dsn'      => false,
+			'dsn'      => $_ENV['MAILER_DSN'] ?? 'null://null',
 			'envelope' => [
 				'sender' => 'idm_bundle@test.bundle',
 			],
 			'headers'  => [
-				'From' => 'IDMarinas Seo Bundle <idm_bundle@test.bundle>',
+				'From' => 'IDMarinas Template Bundle <idm_bundle@test.bundle>',
 			],
 		],
 		'uid'                   => [

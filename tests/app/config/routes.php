@@ -2,7 +2,7 @@
 /**
  * Copyright 2025-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 06/01/2026, 19:33
+ * Last modified by "IDMarinas" on 27/09/2026, 23:35
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -20,19 +20,17 @@
 use Symfony\Bundle\FrameworkBundle\Controller\TemplateController;
 use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
-return function (RoutingConfigurator $routes) {
-	// @formatter:off
+return function (RoutingConfigurator $routes): void {
 //	$routes->import('routes/web_profiler.php');
 
 	//$routes->import('security.route_loader.logout', 'service')->methods(['GET']);
 
-	$routes->add('app_home', '/')
-		->controller(TemplateController::class)
+	$routes
+		->add('app_home', '/')
 		->methods(['GET'])
-		->defaults(['template' => 'pages/home.html.twig'])
-		->options([
-			'seo' => true
+		->controller(TemplateController::class)
+		->defaults([
+			'template' => '@IdmTemplate/home.html.twig',
 		])
 	;
-	// @formatter:on
 };

@@ -2,7 +2,7 @@
 /**
  * Copyright 2025-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 08/01/2026, 21:02
+ * Last modified by "IDMarinas" on 27/09/2026, 23:42
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -19,7 +19,7 @@
 
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
-return static function (ContainerConfigurator $container) {
+return static function (ContainerConfigurator $container): void {
 	$container->extension('framework', [
 		'form'   => true,
 		'assets' => true,

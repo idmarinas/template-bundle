@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 04/01/2026, 18:47
+ * Last modified by "IDMarinas" on 27/09/2026, 23:42
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -21,7 +21,7 @@ use Idm\Bundle\Template\IdmTemplateBundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $container, ContainerBuilder $builder) {
+return static function (ContainerConfigurator $container, ContainerBuilder $builder): void {
 	$namespace = (new ReflectionClass(IdmTemplateBundle::class))->getNamespaceName();
 
 	// @formatter:off
