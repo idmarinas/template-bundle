@@ -37,7 +37,7 @@ jobs:
             symfony: '8.0.*'
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: ${{ (matrix.php == '8.3' && matrix.symfony == '6.4.*') && '0' || '1' }}
 
