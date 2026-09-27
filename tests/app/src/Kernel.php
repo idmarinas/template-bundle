@@ -2,7 +2,7 @@
 /**
  * Copyright 2024-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 04/01/2026, 20:37
+ * Last modified by "IDMarinas" on 27/09/2026, 23:15
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -33,29 +33,29 @@ final class Kernel extends BaseKernel
 {
 	use MicroKernelTrait;
 
-	private array  $extraBundles    = [];
-	private array  $extraRoutes     = [];
-	private array  $extraConfig     = [];
-	private string $testCachePrefix = '';
-	private bool   $clearCache      = true;
+	private array $extraBundles = [];
 
-	public function __construct (string $environment, bool $debug)
+	private array $extraRoutes = [];
+
+	private array $extraConfig = [];
+
+	private string $testCachePrefix = '';
+
+	private bool $clearCache = false;
+
+	public function __construct(string $environment, bool $debug)
 	{
 		parent::__construct($environment, $debug);
-
-		if ('test' === $this->environment) {
-			$this->testCachePrefix = '/' . uniqid('', true);
-		}
 	}
 
-	public function addExtraBundle (string $bundleName): self
+	public function addExtraBundle(string $bundleName): self
 	{
 		$this->extraBundles[$bundleName] = ['all' => true];
 
 		return $this;
 	}
 
-	public function addExtraConfig (string|array $config): self
+	public function addExtraConfig(string|array $config): self
 	{
 		if (is_array($config)) {
 			$this->extraConfig = array_merge($this->extraConfig, $config);
@@ -66,23 +66,23 @@ final class Kernel extends BaseKernel
 		return $this;
 	}
 
-	public function addExtraRoutesFile (string $route): self
+	public function addExtraRoutesFile(string $route): self
 	{
 		$this->extraRoutes[] = $route;
 
 		return $this;
 	}
 
-	public function configureRoutes (RoutingConfigurator $routes): void
+	public function configureRoutes(RoutingConfigurator $routes): void
 	{
 		$extraRoutes = array_unique(array_merge([
-			$this->getConfigDir() . '/routes.php',
-			$this->getTestConfigDir() . '/routes.php',
+			$this->getConfigDir().'/routes.php',
+			$this->getTestConfigDir().'/routes.php',
 		], $this->extraRoutes));
 		array_walk($extraRoutes, static fn(string $route) => file_exists($route) ? $routes->import($route) : null);
 	}
 
-	public function registerBundles (): iterable
+	public function registerBundles(): iterable
 	{
 		$contents = require $this->getBundlesPath();
 		$contents = array_merge($contents, $this->extraBundles);
@@ -94,12 +94,12 @@ final class Kernel extends BaseKernel
 		}
 	}
 
-	public function getCacheDir (): string
+	public function getCacheDir(): string
 	{
-		return parent::getCacheDir() . $this->testCachePrefix;
+		return parent::getCacheDir().$this->testCachePrefix;
 	}
 
-	public function shutdown (): void
+	public function shutdown(): void
 	{
 		parent::shutdown();
 
@@ -121,16 +121,32 @@ final class Kernel extends BaseKernel
 		}
 	}
 
-	public function clearCacheAfterShutdown (): self
+	public function clearCacheAfterShutdown(): self
 	{
 		$this->clearCache = true;
 
 		return $this;
 	}
 
-	public function notClearCacheAfterShutdown (): self
+	public function notClearCacheAfterShutdown(): self
 	{
 		$this->clearCache = false;
+
+		return $this;
+	}
+
+	public function setTestCachePrefix(string $testCachePrefix): self
+	{
+		$testCachePrefix = str_starts_with($testCachePrefix, '/') ? $testCachePrefix : '/'.$testCachePrefix;
+
+		$this->testCachePrefix = $testCachePrefix;
+
+		return $this;
+	}
+
+	public function resetTestCachePrefix(): self
+	{
+		$this->testCachePrefix = '';
 
 		return $this;
 	}
@@ -160,7 +176,7 @@ final class Kernel extends BaseKernel
 	 *    }
 	 * </code>
 	 */
-	public function handleOptions (array $options): void
+	public function handleOptions(array $options): void
 	{
 		if (array_key_exists('config', $options) && is_callable($config = $options['config'])) {
 			$config($this);
@@ -170,23 +186,23 @@ final class Kernel extends BaseKernel
 	/**
 	 * @throws Exception
 	 */
-	protected function configureContainer (
+	protected function configureContainer(
 		ContainerConfigurator $container,
 		LoaderInterface       $loader,
 		ContainerBuilder      $builder
 	): void {
 		// Load config for Test App
 		$extensions = $builder->getExtensions();
-		$fileName = fn(string $name): string => $this->getTestPackagesConfigDir() . '/' . $name . '.php';
+		$fileName = fn(string $name): string => $this->getTestPackagesConfigDir().'/'.$name.'.php';
 		$file = fn(string $name): ?string => file_exists($fileName($name)) ? $fileName($name) : null;
 		array_walk($extensions, static fn(ExtensionInterface &$ext, string $name) => $ext = $file($name));
 
 		$config = [
 			// Load service of Bundle
-			$this->getTestConfigDir() . '/services.php',
+			$this->getTestConfigDir().'/services.php',
 			// Load Fixtures and Factories of Bundle
-			$this->getTestConfigDir() . '/factories.php',
-			$this->getTestConfigDir() . '/fixtures.php',
+			$this->getTestConfigDir().'/factories.php',
+			$this->getTestConfigDir().'/fixtures.php',
 		];
 
 		$full = array_filter($extensions + $config);
@@ -202,18 +218,18 @@ final class Kernel extends BaseKernel
 		}
 	}
 
-	private function getBundlesPath (): string
+	private function getBundlesPath(): string
 	{
-		return $this->getTestConfigDir() . '/bundles.php';
+		return $this->getTestConfigDir().'/bundles.php';
 	}
 
-	private function getTestConfigDir (): string
+	private function getTestConfigDir(): string
 	{
-		return $this->getProjectDir() . '/tests/app/config';
+		return $this->getProjectDir().'/tests/app/config';
 	}
 
-	private function getTestPackagesConfigDir (): string
+	private function getTestPackagesConfigDir(): string
 	{
-		return $this->getTestConfigDir() . '/packages';
+		return $this->getTestConfigDir().'/packages';
 	}
 }
