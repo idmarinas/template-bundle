@@ -28,7 +28,7 @@
 
 	<coverage>
 		<report>
-			<clover outputFile="./build/reports/clover.xml" />
+			<clover outputFile="./build/reports/phpunit.coverage.xml" />
 			<!-- <cobertura outputFile="./build/reports/cobertura.xml" /> -->
 			<!-- <crap4j outputFile="./build/reports/crap4j.xml" threshold="50" /> -->
 			<!-- <html outputDirectory="./build/reports/html-coverage" lowUpperBound="50" highLowerBound="90" /> -->
@@ -37,6 +37,10 @@
 			<!-- <xml outputDirectory="./build/reports/xml-coverage" /> -->
 		</report>
 	</coverage>
+
+	<logging>
+		<junit outputFile="./build/reports/phpunit.xml" />
+	</logging>
 
 	<source ignoreSuppressionOfDeprecations="true"
 	        ignoreIndirectDeprecations="true"
