@@ -2,7 +2,7 @@
 /**
  * Copyright 2025-2026 (C) IDMarinas - All Rights Reserved
  *
- * Last modified by "IDMarinas" on 04/01/2026, 21:27
+ * Last modified by "IDMarinas" on 27/09/2026, 23:19
  *
  * @project IDMarinas Template Bundle
  * @see     https://github.com/idmarinas/idm-template-bundle
@@ -20,27 +20,33 @@
 declare(strict_types=1);
 
 use Rector\Config\RectorConfig;
+use Zenstruck\Foundry\Utils\Rector\FoundrySetList;
 
 return RectorConfig::configure()
 	->withPaths([
-		__DIR__ . '/config',
-		__DIR__ . '/src',
-		__DIR__ . '/tests',
+		__DIR__.'/config',
+		__DIR__.'/src',
+		__DIR__.'/tests',
 	])
+	// uncomment to reach your current PHP version
 	->withPhpSets(php83: true)
 	->withPreparedSets(
-		phpunitCodeQuality : true,
-		doctrineCodeQuality: true,
-		symfonyCodeQuality : true,
-		symfonyConfigs     : true
+		phpunitCodeQuality  : true,
+		phpunitNarrowAsserts: true,
+		phpunitMockToStub   : true,
+		doctrineCodeQuality : true,
+		symfonyCodeQuality  : true,
+		symfonyConfigs      : true
 	)
 	->withTypeCoverageLevel(0)
 	->withDeadCodeLevel(0)
 	->withCodeQualityLevel(0)
-	->withImportNames(importDocBlockNames: false, removeUnusedImports: true)
-	->withComposerBased(twig: true, doctrine: true, symfony: true)
-	->withSymfonyContainerXml(__DIR__ . '/var/cache/dev/App_KernelDevDebugContainer.xml')
+	->withComposerBased(twig: true, doctrine: true, phpunit: true, symfony: true)
+	->withSymfonyContainerXml(__DIR__.'/var/cache/dev/App_KernelDevDebugContainer.xml')
+	->withSets([
+		FoundrySetList::FOUNDRY_2_9,
+	])
 	->withSkip([
-		__DIR__ . '/tests/app/config/bundles.php',
+		__DIR__.'/tests/app/config/bundles.php',
 	])
 ;
