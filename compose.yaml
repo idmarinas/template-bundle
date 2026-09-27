@@ -7,6 +7,9 @@ services:
       SYMFONY_REQUIRE: '6.4.*'
     healthcheck:
       test: php -v || exit 1
+    networks:
+      - default
+      - mailpit
     volumes:
       - ./:/var/www/html
       ## SSH
@@ -14,4 +17,8 @@ services:
 
 volumes:
   ssh_key:
+    external: true
+
+networks:
+  mailpit:
     external: true
