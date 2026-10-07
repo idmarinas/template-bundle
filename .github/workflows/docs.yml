@@ -29,16 +29,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-      - name: Setup Node
-        uses: actions/setup-node@v6
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2.2.0
       - name: Get repository name
         id: repo
         shell: bash
         run: echo "name=${GITHUB_REPOSITORY##*/}" >> $GITHUB_OUTPUT
       - name: Install dependencies
-        run: npm install
+        run: bun install
       - name: Static HTML export with Nuxt
-        run: NUXT_APP_BASE_URL=/${{ steps.repo.outputs.name }}/ npx nuxt generate --preset github_pages
+        run: NUXT_APP_BASE_URL=/${{ steps.repo.outputs.name }}/ bunx nuxt generate --preset github_pages
       - run: rm -f .output/public/.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
