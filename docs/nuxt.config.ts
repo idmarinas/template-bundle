@@ -1,3 +1,21 @@
+/**
+ * Copyright 2026 (C) IDMarinas - All Rights Reserved
+ *
+ * Last modified by "IDMarinas" on 07/10/2026, 21:20
+ *
+ * @project IDMarinas Template Bundle
+ * @see https://github.com/idmarinas/idm-template-bundle
+ *
+ * @file nuxt.config.ts
+ * @date 07/10/2026
+ * @time 21:20
+ *
+ * @author Iván Diaz Marinas (IDMarinas)
+ * @license BSD 3-Clause License
+ *
+ * @since 1.0.0
+ */
+
 export default defineNuxtConfig({
 	extends: ['github:idmarinas/nuxt-layers/docs-bundle#master', 'docus'],
 	docsBundle: {
@@ -41,11 +59,12 @@ export default defineNuxtConfig({
 			]
 		},
 	},
-	$production: {
-		llms: {
-			domain: 'https://idmarinas.github.io/template-bundle'
-		}
-	},
+	// $production: {
+	// 	llms: {
+	// 		domain: 'https://idmarinas.github.io/template-bundle'
+	// 	}
+	// },
+	devServer: {host: "localhost"},
 	vite: {
 		optimizeDeps: {
 			include: [
