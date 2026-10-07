@@ -15,26 +15,31 @@
 
 <div align="center">
 
-[![Test Suite](https://img.shields.io/github/actions/workflow/status/idmarinas/template-bundle/php.yml?branch=master&style=for-the-badge&logo=github&logoColor=white&label=Lotgd%20Test%20Suite)][test-suit]
-[![Quality Gate Status](https://img.shields.io/sonar/quality_gate/SONAR_PROJECT_NAME_CHANGE_ME/BRANCH_MASTER?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white)](https://sonarcloud.io/summary/new_code?id=SONAR_PROJECT_NAME_CHANGE_ME)
-[![Coverage](https://img.shields.io/sonar/coverage/SONAR_PROJECT_NAME_CHANGE_ME/BRANCH_MASTER?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white)][sonarcloud]
-[![Technical Debt](https://img.shields.io/sonar/tech_debt/SONAR_PROJECT_NAME_CHANGE_ME/BRANCH_MASTER?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white)][sonarcloud]
+[![Test Suite](https://img.shields.io/github/actions/workflow/status/idmarinas/template-bundle/php.yml?branch=1.x&style=for-the-badge&logo=github&logoColor=white&label=Lotgd%20Test%20Suite)][test-suit]
+[![Quality Gate Status](https://img.shields.io/sonar/quality_gate/idmarinas_template-bundle/1.x?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white)](https://sonarcloud.io/summary/new_code?id=idmarinas_template-bundle)
+[![Coverage](https://img.shields.io/sonar/coverage/idmarinas_template-bundle/1.x?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white)][sonarcloud]
+[![Technical Debt](https://img.shields.io/sonar/tech_debt/idmarinas_template-bundle/1.x?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarcloud&logoColor=white)][sonarcloud]
 
 <br />
 
-![Github commits (since latest release)](https://img.shields.io/github/commits-since/idmarinas/template-bundle/latest/master?style=for-the-badge)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/w/idmarinas/template-bundle/master?style=for-the-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/idmarinas/template-bundle/master?style=for-the-badge)
+![Github commits (since latest release)](https://img.shields.io/github/commits-since/idmarinas/template-bundle/latest/1.x?style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/idmarinas/template-bundle/1.x?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/idmarinas/template-bundle/1.x?style=for-the-badge)
 
 #### Code analysis
 
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&branch=BRANCH_MASTER&metric=reliability_rating)][sonarcloud]
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&branch=BRANCH_MASTER&metric=bugs)][sonarcloud]
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&branch=BRANCH_MASTER&metric=security_rating)][sonarcloud]
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&branch=BRANCH_MASTER&metric=vulnerabilities)][sonarcloud]
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&branch=BRANCH_MASTER&metric=sqale_rating)][sonarcloud]
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&branch=BRANCH_MASTER&metric=code_smells)][sonarcloud]
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=SONAR_PROJECT_NAME_CHANGE_ME&branch=BRANCH_MASTER&metric=duplicated_lines_density)][sonarcloud]
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_template-bundle&branch=1.x&metric=reliability_rating)][sonarcloud]
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_template-bundle&branch=1.x&metric=bugs)]
+[sonarcloud]
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_template-bundle&branch=1.x&metric=security_rating)]
+[sonarcloud]
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_template-bundle&branch=1.x&metric=vulnerabilities)]
+[sonarcloud]
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_template-bundle&branch=1.x&metric=sqale_rating)]
+[sonarcloud]
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_template-bundle&branch=1.x&metric=code_smells)]
+[sonarcloud]
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=idmarinas_template-bundle&branch=1.x&metric=duplicated_lines_density)][sonarcloud]
 
 </div>
 
@@ -96,5 +101,5 @@
 [![Discord](https://img.shields.io/badge/Discord-IDMarinas-blue?logo=discord&style=for-the-badge&logoColor=white)](https://discord.gg/FXEZqpF)
 
 [//]: # (@formatter:off)
-[sonarcloud]: https://sonarcloud.io/dashboard?id=SONAR_PROJECT_NAME_CHANGE_ME
+[sonarcloud]: https://sonarcloud.io/dashboard?id=idmarinas_template-bundle
 [test-suit]: https://github.com/idmarinas/template-bundle/actions/workflows/php.yml
